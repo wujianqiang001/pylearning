@@ -1,0 +1,14 @@
+<ns0:environment xmlns:ns0="urn:model.commons.qatools.yandex.ru">
+  <id>1cb071bc-efa2-418b-b8f8-883039d9dc60</id>
+  <name>Allure environment parameters</name>
+  <parameter>
+    <key>test_vars</key>
+    <name>test_vars</name>
+    <value>{'body': u'{"m":"Api","c":"Bianli","a":"cart_add","uuid":"941e1aaaba585b952b62c14a3a175a61","goods_id":"1195","shop_id":"31"}', 'url': u'/index.php', 'expection': u'{"errno":"409","errmsg":"\u8bf7\u5148\u767b\u5f55"}', 'testcase': u'\u65e0login_token', 'method': u'get'}</value>
+  </parameter>
+  <parameter>
+    <key>host</key>
+    <name>host</name>
+    <value>api.iamsaonian.com</value>
+  </parameter>
+</ns0:environment>

@@ -1,0 +1,8 @@
+{
+  "testsuite/test_home.py::test_main[\\u4e0b\\u53d1\\u6307\\u4ee4]": true,
+  "testsuite/test_home.py::test_main[\\u6240\\u6709\\u8282\\u70b9]": true,
+  "testsuite/test_home.py::test_main[\\u641c\\u7d22\\u8bbe\\u5907]": true,
+  "testsuite/test_login.py::test_main[\\u4e0d\\u5b58\\u5728\\u7684\\u5546\\u54c1]": true,
+  "testsuite/test_login.py::test_main[\\u5b58\\u5728\\u5546\\u54c1]": true,
+  "testsuite/test_login.py::test_main[\\u5e93\\u5b58\\u4e0d\\u8db31]": true
+}

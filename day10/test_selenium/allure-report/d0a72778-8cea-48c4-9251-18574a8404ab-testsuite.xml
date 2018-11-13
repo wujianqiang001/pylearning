@@ -1,0 +1,18 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1540650907702" stop="1540650907862">
+  <name>PyRD.PR2.day10.test_selenium.test_xpath</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1540650907702" status="passed" stop="1540650907862">
+      <name>test_getname</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8808-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

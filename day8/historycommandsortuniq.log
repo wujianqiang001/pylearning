@@ -1,0 +1,662 @@
+      1 
+      1 : 
+      1 .. 
+      1 **01000000039a32�� 
+     10 cat a.log 
+     10 ls -a 
+     10 ls -la 
+     10 top 
+     11 cat register.py 
+     11 cd a 
+     11 more access1.log 
+    122 ls 
+     12 cat index.html 
+     12 sz 
+     12 vim a.log 
+     13 ls -al 
+     13 ls -l 
+      1 5.9分 
+     15 cd /tmp/ 
+     15 tail access.log 
+     15 ./test.sh 
+     16 cd ~ 
+     16 ls -lt 
+     17 vim test.py 
+      1 a 
+      1 a abc 
+      1 awk 
+      1 awk '{print $(NF -1)}' access1.log 
+      1 awk ‘{print $(NF -1)}’ access1.log 
+      1 awk '{print$(NF-1)}' access1.log |grep -v 200 
+      1 awk '{print $(NF-1)}' access1.log |grep -v 200 >404.logaccess1.lo 
+      1 awk '{print $(NF-1)}' access1.log | grep -v 200 access1.log >error.log 
+      1 awk '{print $(NF-1)}' access1.log |grep -v 200 access1.log >error.log 
+      1 awk '{print $(NF-1)}' access1.log | grep -v 200 |grep -v - 
+      1 awk '{print $(NF-1)}' access1.log |grep -v 200|grep -v - 
+      1 awk '{print $(NF-1)}' access1.log | grep -v 200 |grep -v -404 
+      1 awk '{print $(NF-1)}' access1.log | grep -v 200 |grep -v - |wc -l 
+      1 awk '{print $(NF-1)}' access1.log |grep -v 200|grep -v -|wc -l >404.log 
+      1 awk '{print $(NF -1)}' access1.log -v 
+      1 awk '{print $(NF -1)}' access1.log -v200|grep -v -|wc -1 
+      1 awk '{print $(NF -1)}' access1.log -v 200|grep -v -|wc -l 
+      1 awk '{print $(NF -1)}' access1.log -v200|grep -v -|wc -l 
+      1 awk '{print $(NF-1)' fshf 
+      1 awk '{print $(NF-1)'|grep 200 access1.log >404.log 
+      1 awk '{print ${NF-1}'|grep 200 access1.log >404.log 
+      1 awk '{print $(NF-1)}' |grep -v 200 access1.log 
+      1 awk '{print $(NF-1)}'|grep -v 200 access1.log b.log 
+      1 awk '{print $(NF-1)}'|grep -v 200 access.log 
+      1 awk '{print $(NF -l)}' access1.log 
+      1 b 
+      1 cat access1.log |awk "200" 
+      1 cat access1.log |awk -F 
+      1 cat access1.log |awk -F "... " '{print $6}' 
+      1 cat access1.log |awk -F "... " '{print $6}' |grep 200 
+      1 cat access1.log |awk '{print $6}' 
+      1 cat access1.log |awk '{print $NF-1}' 
+      1 cat access1.log|awk '{print$(NF-1)}'|grep -v 200 
+      1 cat accountOpen.txt 
+      1 cat /etc/systemd/system.conf 
+      1 cat hi.log 
+      1 cat historycommand.log |sort |uniq 
+      1 cat historycommand.log |sort|uniq -c|sort -k 1 -n -r 
+      1 cat historycommand.log |sort |uniq -n 
+      1 cat historycommand.log |uniq -c|sort 
+      1 cat historycommand.log |uniq -c|sort -k 1 -n -r 
+      1 cat /houqing 
+      1 cat register.py |egrep "a*" 
+      1 cat register.py |egrep "\\d" 
+      1 cat register.py |egrep "\d" 
+      1 cat register.py |egrep "prin*" 
+      1 cat register.py |egrep "pro*" 
+      1 cat register.py |egrep "probab*" 
+      1 cat register.py |egrep "pro*y" 
+      1 cat register.py |egrep pro*y 
+      1 cat register.py |grep -E "pro.*?m" 
+      1 cat register.py |grep -E "pro.*m?$" 
+      1 cat register.py |grep -E "pro.*m$" 
+      1 cat register.py |grep -E "pro.*m\n$" 
+      1 cat register.py |grep -E "pro.*m\r\n$" 
+      1 cat register.py |grep -E "pro.*s" 
+      1 cat register.py |grep -E "pro.*s$" 
+      1 cat register.py |grep "print" 
+      1 cat register.py |grep pro*y 
+      1 cat register.py |grep RegisterPy() 
+      1 cat register.py |wc -c 
+      1 cat register.py |wc -n 
+      1 cat secret.txtcat secret.txt\cd - 
+      1 cat secret.txt |egrep "00000010x*" 
+      1 cat secret.txt |egrep "00000020*" 
+      1 cat secret.txt |egrep "00000020x*" 
+      1 cat secret.txt |egrep "index*" 
+      1 cat secret.txt |egrep"index*" 
+      1 cat secret.txt |grep 202 -l 
+      1 cat secret.txt |grep202 |wc -h 
+      1 cat secret.txt |grep202 |wc -l 
+      1 cat secret.txt |grep202 |wc -n 
+      1 cat secret.txt |grep "9999" 
+      1 cat secret.txt |grep 99999992 
+      1 cat secret.txt |grep 999999920|wc -l 
+      1 cat secret.txt |grep "index*" 
+      1 cat secret.txt |grep -l 
+      1 cat secret.txt grep|-wc 
+      1 cat tang.py 
+      1 cat test1.py 
+      1 cat test.log |grep a|wc -m 
+      1 cat test.log |wc -l 
+      1 cat Wireshark网络分析实战.pdf 
+      1 cat 新建文本文档_\(2\).txt 
+      1 cd _ 
+      1 cd ! 
+      1 cd // 
+      1 cd . 
+      1 cd ../../../ 
+      1 cd '' 
+      1 cd % 
+      1 cd/ 
+      1 cd../../../ 
+      1 cd -a 
+      1 cd /a 
+      1 cd boot 
+      1 cd c 
+      1 cd cat houqing 
+      1 cd cd .. 
+      1 cd conf 
+      1 cd cyh 
+      1 cd /d 
+      1 cd domains/ 
+      1 cd ../ham/a 
+      1 cd../home 
+      1 cd ../home/ubuntu/ 
+      1 cd hou 
+      1 cd /houiqng 
+      1 cd houiqng 
+      1 cd houqinga 
+      1 cd /hp 
+      1 cd index.html 
+      1 cd -l 
+      1 cd /lbl 
+      1 cd liubailon 
+      1 cd liubailong/ 
+      1 cd ..log 
+      1 cd ../logs 
+      1 cd logs/ 
+      1 cd more 
+      1 cd /pip 
+      1 cd pwd 
+      1 cd sbin/ 
+      1 cd system/ 
+      1 cd /tang 
+      1 cd /tang/a/b/c 
+      1 cd tang/q/ 
+      1 cd /tep/ 
+      1 cd ../tmp 
+      1 cd /tmp/tang/ 
+      1 cd /tmp/wxw 
+      1 cd uban 
+      1 cd /usr/local/nginx/ 
+      1 cd val 
+      1 cd /var 
+      1 cd /wangxiaowen 
+      1 cd wangxiaowen/ 
+      1 cd /wiq 
+      1 cd /wjq 
+      1 cd /wjq/ 
+      1 cd wjq/a/b/c/ 
+      1 cd wxw 
+      1 chmod 1 myPython.py 
+      1 chmod 777 myPython.py 
+      1 chmod a+w register.py 
+      1 chmod +x 1.py 
+      1 chmod -x cyhtest.py 
+      1 chmod +x cyhtest.py 
+      1 chmod x myPython.py 
+      1 chmod +x system 
+      1 chmod +x tang.py 
+      1 chmod +x test.sh 
+      1 copy 404.log /tmp/test 
+      1 copy a.py /test 
+      1 copy/tang/404.log /test 
+      1 copy/tmp/tang/404.log /test 
+      1 copy/tmp/tang/access1.log /test 
+      1 copy /wjq/404.log /test 
+      1 cp 404.log 405.log 
+      1 cp 404.log /tmp/test 
+      1 cp access1.log /lbl 
+      1 cp access1.log lbl 
+      1 cp access1.log /tmp/chw 
+      1 cp access1.log /tmp/cyh/ 
+      1 cp access1.log /tmp/tang/ 
+      1 cp access1.log /tmp/test 
+      1 cp access1.log /tmp/wangxiaowen 
+      1 cp accountOpen.txt chw 
+      1 cp chw.txt lbl/liubailong/ 
+      1 cp ham/a/test.log wjq/ 
+      1 cp houqing/a/test.py wjq/ 
+      1 cp houqing/ wjq/ 
+      1 cp -r houqing/ ham/ 
+      1 cp -r houqing/ wjq/ 
+      1 cp -r test wjq/ lbl/ 
+      1 cp -r /wangxiaowen /w 
+      1 cp -r /wangxiaowen /wxw 
+      1 cp /tang/404.log /test/ 
+      1 cp /tang/404.log/test/ 
+      1 cp tang.py tang 
+      1 cp tang.py tang/a 
+      1 cp test.log wjq/ 
+      1 cp test.py b 
+      1 cp test.py houqing/ 
+      1 cp test.py houqing/a/ 
+      1 cp wjq/access1.log cyh/ 
+      1 cp wjq/access1.log ham/a 
+      1 crontab l 
+      1 crontab -r 
+      1 CRT 
+      1 curl -H "host: www.abc.com" http://localhost/index.html -v 
+      1 curl -V 
+      1 delect 1.py/ 
+      1 dir 
+      1 dpkg -l | grep zlib 
+      1 echo “1234” >a.log 
+      1 echo "123" >a.log 
+      1 echo "abc" 
+      1 echo "abc" a.log 
+      1 echo abc >>a.log 
+      1 echo abc a.log 
+      1 echo "abc" >tang.log 
+      1 echo abc test.txt 
+      1 echo access.log |awk '{print $(NF-1)}'|grep -v 200 >a.log 
+      1 echo "andnkajd">test.txt 
+      1 echo hello 
+      1 echo "hello" >> a.log 
+      1 echo "hello" >a.log 
+      1 echo "hello hello" >hi.log 
+      1 echo "hello" >> tang.log 
+      1 echo "Hello">>test.txt 
+      1 echo "hello world" >test.log 
+      1 echo "hi" >>test.log 
+      1 echo tang.log 
+      1 egrep -E "\d" register.py 
+      1 egrep -E "pro.*" register.py 
+      1 egrep -E "pro.*s$" register.py 
+      1 egrep -E "pro.s$" register.py 
+      1 egrep -E "pro*s$" register.py 
+      1 egrep -E "pro\.s$" register.py 
+      1 egrep -E "pros$" register.py 
+      1 egrep -E "pr.*" register.py 
+      1 egrep -G "\d" register.py 
+      1 egrep -G "pr.*" register.py 
+      1 egrep --help 
+      1 egrep "pro.:*" register.py 
+      1 egrep register.py -G "\d" 
+      1 find acc8 
+      1 find access1.log 
+      1 find access1.og 
+      1 find / -name "iptables" 
+      1 free 
+      1 free 2 
+      1 free -k 
+      1 get nstallkey = "InstallPath" 
+      1 grep 200 access1.log 
+      1 grep 3da93343b5de4fdcbbacd21d0fd028d3 access1.log 
+      1 grep 3da93343b5de4fdcbbacd21d0fd028d3 access1.log > ace.log 
+      1 grep 3da93343b5de4fdcbbacd21d0fd028d3 access1.log > actIds.log 
+      1 grep 99999992 secret.txt 
+      1 grep backend-act-msg access1.log 
+      1 grep http://minisite.le.com access1.log 
+      1 grep jQuery110108468906036578119 access1.log 
+      1 grep -v "/bin$" /etc/pwasswd 
+      1 head -100 
+      1 head -100 secret.txt 
+      1 head 20 secret.txt 
+      1 head 5 secret.txt 
+      1 head5 secret.txt 
+      1 history |awk '{for (i=4;i<=NF;i++) printf $i " ";printf "\n"}' 
+      1 history |awk '{for (i=4;i<=NF;i++) printf $i " ";printf "\n"}' >> historycommand.log 
+      1 history |awk '{for (i=4;i<=NF;i++) print $i}' 
+      1 history |awk '{print $4}' 
+      1 history |awk '{print $4:$NF}' 
+      1 houqinga houqing123 
+      1 hz 
+      1 hz accountOpen.txt 
+      1 hz /index.html 
+      1 ifconfig 
+      1 if (QueryValue(reg, installkey) == installpath and 
+      1 ip a 
+      1 iperf -s 
+      1 iperf top 
+      1 is -a 
+      1 kill -9 22306 
+      1 kill -9 22927 
+      1 kill -9 23306 
+      1 kill -9 23567 
+      1 kill -9 30021 
+      1 kill -9 30203 
+      1 kill -9 32133 
+      1 kill -9 32286 
+      1 kk 
+      1 ks 
+      1 la -a 
+      1 la -lt 
+      1 less actIds.log 
+      1 less register.py 
+      1 less sec 
+      1 ll ham 
+      1 ll ham/a 
+      1 ll houqing/a 
+      1 ll -lh 
+      1 ll myPython.py 
+      1 ll /usr/local/nginx/ 
+      1 lrzsz 
+      1 ls -l|awk -F "2" '{print $5}' 
+      1 ls -l|awk -F "8" '{print $1}' 
+      1 ls -l|awk -F "8" '{print $2}' 
+      1 ls -l|awk -F "8" '{print $5}' 
+      1 ls -l|awk -F " " '{print $5}' 
+      1 ls -l |awk '{print $5}' 
+      1 ls -l|awk '{print$(NF-1)}' 
+      1 ls -l|awk '{print$(NF-1)}'|grep -v 200 
+      1 mkdir 1.py 
+      1 mkdir a 
+      1 mkdir b 
+      1 mkdir cyh 
+      1 mkdir domains 
+      1 mkdir ham 
+      1 mkdir ham/a 
+      1 mkdir hou 
+      1 mkdir houqing 
+      1 mkdir lbl 
+      1 mkdir logs 
+      1 mkdir lt 
+      1 mkdir -p /3/3/3t 
+      1 mkdir -p 3/3/3t 
+      1 mkdir -p chw/a/b/c 
+      1 mkdir -p ham/a 
+      1 mkdir -p houqing/a/b/c/d/e 
+      1 mkdir -p lbl/liubailong/system/operation 
+      1 mkdir -p tang/a/b/c 
+      1 mkdir -p tang/q w 
+      1 mkdir -p wangxiaowen/a/b/c 
+      1 mkdir -p wangxiaowen/a/b/c/d/e/f 
+      1 mkdir -p wjq/a/b/c 
+      1 mkdir tang/a 
+      1 mkdir test 
+      1 mkdir wangxiaowen 
+      1 mkdir wxw 
+      1 mkdri /lbl/liubailong/test 
+      1 more 
+      1 more accountOpen.txt 
+      1 more folder.ini 
+      1 more historycommand.log 
+      1 more index.html 
+      1 more register.py 
+      1 more se 
+      1 more Wireshark网络分析实战.pdf 
+      1 mv 
+      1 mv a abc 
+      1 mv a b 
+      1 mv a.log chw 
+      1 mv b c 
+      1 mv ham/hou /ham/a 
+      1 mv ham/houqing/ ham/ 
+      1 mv ham/houqing/ ham/hou 
+      1 mv houqing/ houqinga 
+      1 mv index.html1 a.html 
+      1 mv nginx-1.13.1 nginx 
+      1 mv nginx/ /usr/local/ 
+      1 mv tang.py tang 
+      1 mv tang.py tang1.py 
+      1 mv test.log test.txt 
+      1 mv test.log wjq/ 
+      1 mv test.py test_a.txt 
+      1 mv test.txt taset.tex 
+      1 mv wangxiaowen/test.py wxw 
+      1 ./myPython 
+      1 mysql -uroot 
+      1 mysql -uroot -p 
+      1 pkill nginx 
+      1 ps 
+      1 ps aux 
+      1 ps aux|grep mysql 
+      1 pyhton test.py 
+      1 python 
+      1 python tang.py 
+      1 q 
+      1 r 
+      1 re 
+      1 remove 1.py/ 
+      1 rm 1.py/ 
+      1 rm 404.logaccess1.lo 
+      1 rm a 
+      1 rm a/hell.py /test 
+      1 rm a.log 
+      1 rm -f 1.py/ 
+      1 rm -f tang 
+      1 rm -f tang.log 
+      1 rm -f .test.py.swp 
+      1 rm myPyhon.py .. 
+      1 rm myPyhon.py /test 
+      1 rm myPyhon.py /test/ 
+      1 rm -rf 1.py/ 
+      1 rm -rf a 
+      1 rm -rf houqing/ 
+      1 rm -rf lbl/liubailong/system/ 
+      1 sbin/nginx -t 
+      1 SetValue(reg, installkey, REG_SZ, installpath) 
+      1 studo apt install lrzsz 
+      1 sudo apt-get install libpcre3 libpcre3-dev 
+      1 sudo apt-get install mysql-server 
+      1 sudo apt-get install openssl libssl-dev 
+      1 sudo apt-get install zlib1g-dev 
+      1 sudo apt install ctop 
+      1 sudo apt install iperf 
+      1 sudo apt install libmysqlclient-dev 
+      1 sudo apt install linux-tools-common 
+      1 sudo apt install mysql-client 
+      1 sudo apt install perf 
+      1 sudo apt install tree 
+      1 sudo apt isntall mysql-client 
+      1 sudo ./configure --user=ubuntu --group=ubuntu --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_realip_module 
+      1 sudo ./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_realip_module 
+      1 sudo mv nginx/ /usr/local/ 
+      1 sudo ./nginx 
+      1 sudo ./nginx -t 
+      1 sudo ../sbin/nginx 
+      1 sudo sbin/nginx 
+      1 sudo ../sbin/nginx -s stop 
+      1 sudo sbin/nginx -t 
+      1 sudo vi + /etc/sysconfig/iptables 
+      1 sz 404.log 
+      1 sz accountOpen.txt 
+      1 sz default 
+      1 sz default exit 
+      1 sz register.py 
+      1 sz secret.txt 
+      1 sz setRps.log 
+      1 tail -100 
+      1 tail -1000 secret.txt 
+      1 tail -1000 secret.txt |grep 99999900 
+      1 tail -1000 secret.txt |grep99999900 
+      1 tail -1000 secret.txt |grep 99999973 
+      1 tail-1000 secret.txt |grep 99999973 
+      1 tail -1000 secret.txt |more 
+      1 tail -100f net_affinity.log 
+      1 tail -100f secret.txt 
+      1 tail -100 secret.txt |grep 999999 
+      1 tail -100 secret.txt |grep 9999999 
+      1 tail -100 secret.txt |grep 9999999|wc -l 
+      1 tail -100 secret.txt |head -100 
+      1 tail -100 secret.txt |tail -10 
+      1 tail -100 secret.txt |wc -l 
+      1 tail -10 access1.log 
+      1 tail -10 secret.txt |head -5 
+      1 tail -45 secret.txt 
+      1 tail-45 secret.txt 
+      1 tail access1.log 
+      1 tail a.log 
+      1 tar zxvf nginx-1.13.1.tar.gz 
+      1 test.txt 
+      1 tial historycommand.log 
+      1 touch 1.py 
+      1 touch access.log 
+      1 touch error.log 
+      1 touch hell.py 
+      1 touch hi.log 
+      1 touch myPython.py 
+      1 touch tang.log 
+      1 touch test1.py 
+      1 touch test.log 
+      1 touch test.txt 
+      1 vi 
+      1 vi a.log 
+      1 vi + /etc/sysconfig/iptables 
+      1 vim 
+      1 vim "1234567890" >hi.log 
+      1 vim 1.py 
+      1 vim 405.log 
+      1 vim abdc 
+      1 vim ace.log 
+      1 vim b.log 
+      1 vim ../conf/nginx.conf 
+      1 vim conf/nginx.conf 
+      1 vim cyhtest.py 
+      1 vim hi.log 
+      1 vim liubailong 
+      1 vim myPhone.py 
+      1 vim re 
+      1 vim tang.py 
+      1 vim test.txt 
+      1 vim /usr/share/iptables 
+      1 vi test1.py 
+      1 wc --help 
+      1 wget http://nginx.org/download/nginx-1.13.1.tar.gz 
+      1 yum -m lrzsz 
+      1 测试版 
+     20 cd / 
+     20 vim test.sh 
+     26 cd tmp 
+     27 more secret.txt 
+    288 ll 
+      2 awk '{print $(NF-1)}' access1.log |grep -v 200>404.log 
+      2 awk '{print $(NF-1)}' access1.log |grep -v 200|wc -l 
+      2 awk '{print $(NF-1)}'|grep -v 200 access1.log >404.log 
+      2 cat access1.log |awk '{print $(NF-1)}' 
+      2 cat access1.log |awk '{print $(NF-1)}'|grep -v 200 
+      2 cat access1.log |wc -l 
+      2 cat historycommand.log |sort |uniq -c 
+      2 cat houqing 
+      2 cat myPython.py 
+      2 cat register.py |grep -E "[0-9]*" 
+      2 cat register.py |grep -E "pro.*m*" 
+      2 cat register.py |grep installkey 
+      2 cat register.py |grep "prin*" 
+      2 cat register.py |grep print 
+      2 cat register.py |grep pro 
+      2 cat register.py |wc -m 
+      2 cat test.log 
+      2 cat test.log |wc -c 
+      2 cat test.log |wc -m 
+      2 cat test.py 
+      2 cat test.txt 
+      2 cd ./ 
+      2 cd con 
+      2 cd ham 
+      2 cd /ham/a 
+      2 cd /home/ 
+      2 cd ../home 
+      2 cd home/ 
+      2 cd /home/ubuntu/ 
+      2 cd /home/ubuntu/.pip/ 
+      2 cd html/ 
+      2 cd ll 
+      2 cd q 
+      2 cd tang/ 
+      2 cd tem 
+      2 cd temp 
+      2 cd /test/ 
+      2 cd ubantu 
+      2 chmod +x test.py 
+      2 copy /tang/access1.log /test 
+      2 crontab -e 
+      2 ctop 
+      2 curl -v 
+      2 echo "abc" >a.log 
+      2 egrep -E "pro" register.py 
+      2 free -m 
+      2 grep installkey register.py |wc -l 
+      2 head -15 secret.txt 
+      2 history |awk '{for (i=4;i<=NF;i++) printf $i " ";printf "\n"}' >>historycommand.log 
+      2 >historycommand.log 
+      2 hz index.html 
+      2 iperf 
+      2 ll -h 
+      2 ll ham/ 
+      2 lls 
+      2 more actIds.log 
+      2 ./nginx -t 
+      2 perf 
+      2 rm -rf tang 
+      2 sudo make 
+      2 sudo make install 
+      2 sudo ../../sbin/nginx -s reload 
+      2 sz cyh.txt 
+      2 sz folder.ini 
+      2 tail -100 secret.txt | head -10 
+      2 tail -100 secret.txt | more 
+      2 tail -15 secret.txt 
+      2 tail historycommand.log 
+      2 touch test.py 
+      2 vim error.log 
+      2 vim system 
+      2 vim tang.log 
+      2 vim www.efg.com.conf 
+     30 cd - 
+     30 cd /tmp 
+     30 rz 
+      3 awk '{print $(NF-1)}' access1.log |grep -v 200 >404.log 
+      3 cat b.log 
+      3 cat register.py |wc -w 
+      3 cat secret.txt |grep 99999992|wc -l 
+      3 cd ../.. 
+      3 cd .pip 
+      3 cd /tmp/wangxiaowen 
+      3 cd wjq/ 
+      3 echo "hello" >>a.log 
+      3 grep installkey register.py 
+      3 head secret.txt 
+      3 history 
+      3 la 
+      3 less 
+      3 ll test.py 
+      3 ls index.html 
+      3 ls -l|awk '{print $5}' 
+      3 ls -t 
+      3 mkdir tang 
+      3 mkdir wjq 
+      3 more 404.log 
+      3 pkill top 
+      3 sudo ../sbin/nginx -s reload 
+      3 tail -100 secret.txt 
+      3 tail -100 secret.txt |more 
+      3 ./tang.py 
+      3 touch a.log 
+      3 vim index.html1 
+     41 ll -t 
+     41 pwd 
+      4 cat register.py |grep -E "pro.*m" 
+      4 cd 
+      4 cd ../ 
+      4 cd ../../ 
+      4 cd ham/a 
+      4 cd /home 
+      4 cd ../home/ 
+      4 cd /houqing 
+      4 cd lbl 
+      4 cd tmp/ 
+      4 clear 
+      4 l 
+      4 ll wjq/ 
+      4 ps aux|grep nginx 
+      4 python test.py 
+      4 sudo apt install lrzsz 
+      4 sz access1.log 
+      4 sz chw.txt 
+      4 vim a.html 
+      4 vim myPython.py 
+      4 vim nginx.conf 
+      4 wget www.baidu.com 
+      5 awk '{print $(NF-1)}' access1.log |grep -v 200|grep -v -|wc -l 
+      5 awk '{print $(NF-1)}'|grep -v 200 access1.log 
+      5 cat 404.log 
+      5 cat tang.log 
+      5 cd b 
+      5 cd chw 
+      5 cd houqing 
+      5 cd .pip/ 
+      5 cd wangxiaowen 
+      5 crontab -l 
+      5 less secret.txt 
+      5 ps aux|grep top 
+      5 sh test.sh 
+      5 tail -100 secret.txt |head -10 
+      5 vim test.log 
+      6 cat access1.log 
+      6 cat secret.txt 
+      6 cd.. 
+      6 cd tang 
+      6 cd ubuntu/ 
+      6 ./myPython.py 
+      6 vim access1.log 
+      6 vim register.py 
+     73 cd .. 
+      7 awk '{print $(NF-1)}' access1.log |grep -v 200 
+      7 cat register.py |wc -l 
+      7 cd home 
+      7 cd test 
+      7 tree 
+      8 cd wjq 
+      8 ls -lh 
+      8 ./test.py 
+      8 vim 404.log 
+      9 ps aux|grep python 
+      9 tail secret.txt 

@@ -1,0 +1,82 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1533219572824" stop="1533219573068">
+  <name>api.testsuite.test_login</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1533219572824" status="passed" stop="1533219572884">
+      <name>test_main[\u7528\u6237\u540d\u5bc6\u7801\u9a8c\u8bc1\u6210\u529f]</name>
+      <attachments>
+        <attachment source="74729555-6e0f-46a3-b444-5218f7a5c91c-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="963db803-58ba-4ca2-8d2b-c85e8b12db5d-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572924" status="passed" stop="1533219572954">
+      <name>test_main[\u7528\u6237\u540d\u5bc6\u7801\u9a8c\u8bc1\u5931\u8d250]</name>
+      <attachments>
+        <attachment source="11202c34-fba0-498f-af04-0d5847ec7e4a-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="c529e468-030b-410d-baac-016672eecc40-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572984" status="passed" stop="1533219573014">
+      <name>test_main[\u7528\u6237\u540d\u5bc6\u7801\u9a8c\u8bc1\u5931\u8d251]</name>
+      <attachments>
+        <attachment source="21c76848-8dc6-4eb8-bfa8-25fd81533621-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="700dcee3-f8ae-47f2-9444-dc80dc07ed78-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219573043" status="passed" stop="1533219573068">
+      <name>test_main[\u9a8c\u8bc1\u7801\u9519\u8bef]</name>
+      <attachments>
+        <attachment source="26f119b9-a19e-4912-9700-cfb30a1150bc-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="4b6ddc75-995e-4e0f-bc1b-9be71914a2c5-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

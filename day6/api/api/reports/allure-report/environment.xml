@@ -1,0 +1,14 @@
+<ns0:environment xmlns:ns0="urn:model.commons.qatools.yandex.ru">
+  <id>bee07700-884a-44ac-a453-5206384ded8b</id>
+  <name>Allure environment parameters</name>
+  <parameter>
+    <key>test_vars</key>
+    <name>test_vars</name>
+    <value>{'method': 'post', 'body': '{"username":"test","password":"123456","code":"3243"}', 'expection': '2', 'testcase': '验证码错误', 'url': '/login/Login'}</value>
+  </parameter>
+  <parameter>
+    <key>host</key>
+    <name>host</name>
+    <value>221.123.191.53:8123</value>
+  </parameter>
+</ns0:environment>

@@ -1,0 +1,5 @@
+{
+  "run.py::test_main[\\u5b58\\u5728\\u5546\\u54c1-get-/index.php-{\"m\":\"Api\",\"c\":\"Bianli\",\"a\":\"cart_add\",\"uuid\":\"941e1aaaba585b952b62c14a3a175a61\",\"login_token\":\"40882d26122e53f6e91641b14f9a4b9a\",\"goods_id\":\"1195\",\"shop_id\":\"31\"}-{\"errno\":\"201\",\"errmsg\":\"\\u8fd4\\u56de\\u6210\\u529f\"}]": true, 
+  "run.py::test_main[testcase-url-expection-body-method]": true, 
+  "testsuite/test_a.py::test_main[\\u5b58\\u5728\\u5546\\u54c1]": true
+}

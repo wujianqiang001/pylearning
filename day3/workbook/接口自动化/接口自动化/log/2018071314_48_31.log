@@ -1,0 +1,218 @@
+Starting new HTTPS connection (1): preapp.htkeystone.com
+Starting new HTTPS connection (1): preapp.htkeystone.com
+https://preapp.htkeystone.com:8089 "POST / HTTP/1.1" 200 366
+https://preapp.htkeystone.com:8089 "POST / HTTP/1.1" 200 366
+utf-8  confidence = 0.99
+utf-8  confidence = 0.99
+SHIFT_JIS Japanese confidence = 0.01
+SHIFT_JIS Japanese confidence = 0.01
+EUC-JP Japanese confidence = 0.01
+EUC-JP Japanese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+EUC-KR Korean confidence = 0.01
+EUC-KR Korean confidence = 0.01
+CP949 Korean confidence = 0.01
+CP949 Korean confidence = 0.01
+Big5 Chinese confidence = 0.01
+Big5 Chinese confidence = 0.01
+EUC-TW Taiwan confidence = 0.01
+EUC-TW Taiwan confidence = 0.01
+windows-1251 Russian confidence = 0.01
+windows-1251 Russian confidence = 0.01
+KOI8-R Russian confidence = 0.01
+KOI8-R Russian confidence = 0.01
+ISO-8859-5 Russian confidence = 0.0
+ISO-8859-5 Russian confidence = 0.0
+MacCyrillic Russian confidence = 0.0
+MacCyrillic Russian confidence = 0.0
+IBM866 Russian confidence = 0.04413024674113901
+IBM866 Russian confidence = 0.04413024674113901
+IBM855 Russian confidence = 0.0
+IBM855 Russian confidence = 0.0
+ISO-8859-7 Greek confidence = 0.0
+ISO-8859-7 Greek confidence = 0.0
+windows-1253 Greek confidence = 0.0
+windows-1253 Greek confidence = 0.0
+ISO-8859-5 Bulgairan confidence = 0.0
+ISO-8859-5 Bulgairan confidence = 0.0
+windows-1251 Bulgarian confidence = 0.0
+windows-1251 Bulgarian confidence = 0.0
+TIS-620 Thai confidence = 0.0455773535245807
+TIS-620 Thai confidence = 0.0455773535245807
+ISO-8859-9 Turkish confidence = 0.1628735002447277
+ISO-8859-9 Turkish confidence = 0.1628735002447277
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+utf-8  confidence = 0.99
+utf-8  confidence = 0.99
+SHIFT_JIS Japanese confidence = 0.01
+SHIFT_JIS Japanese confidence = 0.01
+EUC-JP Japanese confidence = 0.01
+EUC-JP Japanese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+EUC-KR Korean confidence = 0.01
+EUC-KR Korean confidence = 0.01
+CP949 Korean confidence = 0.01
+CP949 Korean confidence = 0.01
+Big5 Chinese confidence = 0.01
+Big5 Chinese confidence = 0.01
+EUC-TW Taiwan confidence = 0.01
+EUC-TW Taiwan confidence = 0.01
+Starting new HTTPS connection (1): preapp.htkeystone.com
+Starting new HTTPS connection (1): preapp.htkeystone.com
+https://preapp.htkeystone.com:8089 "POST / HTTP/1.1" 200 39
+https://preapp.htkeystone.com:8089 "POST / HTTP/1.1" 200 39
+EUC-JP Japanese prober hit error at byte 17
+EUC-JP Japanese prober hit error at byte 17
+EUC-KR Korean prober hit error at byte 17
+EUC-KR Korean prober hit error at byte 17
+CP949 Korean prober hit error at byte 17
+CP949 Korean prober hit error at byte 17
+Big5 Chinese prober hit error at byte 18
+Big5 Chinese prober hit error at byte 18
+EUC-TW Taiwan prober hit error at byte 17
+EUC-TW Taiwan prober hit error at byte 17
+utf-8  confidence = 0.7525
+utf-8  confidence = 0.7525
+SHIFT_JIS Japanese confidence = 0.01
+SHIFT_JIS Japanese confidence = 0.01
+EUC-JP not active
+EUC-JP not active
+GB2312 Chinese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+EUC-KR not active
+EUC-KR not active
+CP949 not active
+CP949 not active
+Big5 not active
+Big5 not active
+EUC-TW not active
+EUC-TW not active
+windows-1251 Russian confidence = 0.01
+windows-1251 Russian confidence = 0.01
+KOI8-R Russian confidence = 0.01
+KOI8-R Russian confidence = 0.01
+ISO-8859-5 Russian confidence = 0.01
+ISO-8859-5 Russian confidence = 0.01
+MacCyrillic Russian confidence = 0.0
+MacCyrillic Russian confidence = 0.0
+IBM866 Russian confidence = 0.0
+IBM866 Russian confidence = 0.0
+IBM855 Russian confidence = 0.01
+IBM855 Russian confidence = 0.01
+ISO-8859-7 Greek confidence = 0.01
+ISO-8859-7 Greek confidence = 0.01
+windows-1253 Greek confidence = 0.01
+windows-1253 Greek confidence = 0.01
+ISO-8859-5 Bulgairan confidence = 0.01
+ISO-8859-5 Bulgairan confidence = 0.01
+windows-1251 Bulgarian confidence = 0.01
+windows-1251 Bulgarian confidence = 0.01
+TIS-620 Thai confidence = 0.01
+TIS-620 Thai confidence = 0.01
+ISO-8859-9 Turkish confidence = 0.3797019990225386
+ISO-8859-9 Turkish confidence = 0.3797019990225386
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.01
+windows-1255 Hebrew confidence = 0.01
+windows-1255 Hebrew confidence = 0.01
+windows-1255 Hebrew confidence = 0.01
+utf-8  confidence = 0.7525
+utf-8  confidence = 0.7525
+SHIFT_JIS Japanese confidence = 0.01
+SHIFT_JIS Japanese confidence = 0.01
+EUC-JP not active
+EUC-JP not active
+GB2312 Chinese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+EUC-KR not active
+EUC-KR not active
+CP949 not active
+CP949 not active
+Big5 not active
+Big5 not active
+EUC-TW not active
+EUC-TW not active
+Starting new HTTPS connection (1): preapp.htkeystone.com
+Starting new HTTPS connection (1): preapp.htkeystone.com
+https://preapp.htkeystone.com:8089 "POST / HTTP/1.1" 200 47
+https://preapp.htkeystone.com:8089 "POST / HTTP/1.1" 200 47
+EUC-JP Japanese prober hit error at byte 17
+EUC-JP Japanese prober hit error at byte 17
+EUC-KR Korean prober hit error at byte 17
+EUC-KR Korean prober hit error at byte 17
+CP949 Korean prober hit error at byte 17
+CP949 Korean prober hit error at byte 17
+Big5 Chinese prober hit error at byte 18
+Big5 Chinese prober hit error at byte 18
+EUC-TW Taiwan prober hit error at byte 17
+EUC-TW Taiwan prober hit error at byte 17
+utf-8  confidence = 0.7525
+utf-8  confidence = 0.7525
+SHIFT_JIS Japanese confidence = 0.01
+SHIFT_JIS Japanese confidence = 0.01
+EUC-JP not active
+EUC-JP not active
+GB2312 Chinese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+EUC-KR not active
+EUC-KR not active
+CP949 not active
+CP949 not active
+Big5 not active
+Big5 not active
+EUC-TW not active
+EUC-TW not active
+windows-1251 Russian confidence = 0.01
+windows-1251 Russian confidence = 0.01
+KOI8-R Russian confidence = 0.01
+KOI8-R Russian confidence = 0.01
+ISO-8859-5 Russian confidence = 0.01
+ISO-8859-5 Russian confidence = 0.01
+MacCyrillic Russian confidence = 0.0
+MacCyrillic Russian confidence = 0.0
+IBM866 Russian confidence = 0.0
+IBM866 Russian confidence = 0.0
+IBM855 Russian confidence = 0.01
+IBM855 Russian confidence = 0.01
+ISO-8859-7 Greek confidence = 0.01
+ISO-8859-7 Greek confidence = 0.01
+windows-1253 Greek confidence = 0.01
+windows-1253 Greek confidence = 0.01
+ISO-8859-5 Bulgairan confidence = 0.01
+ISO-8859-5 Bulgairan confidence = 0.01
+windows-1251 Bulgarian confidence = 0.01
+windows-1251 Bulgarian confidence = 0.01
+TIS-620 Thai confidence = 0.01
+TIS-620 Thai confidence = 0.01
+ISO-8859-9 Turkish confidence = 0.40869402357844675
+ISO-8859-9 Turkish confidence = 0.40869402357844675
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.0
+windows-1255 Hebrew confidence = 0.01
+windows-1255 Hebrew confidence = 0.01
+windows-1255 Hebrew confidence = 0.01
+windows-1255 Hebrew confidence = 0.01
+utf-8  confidence = 0.7525
+utf-8  confidence = 0.7525
+SHIFT_JIS Japanese confidence = 0.01
+SHIFT_JIS Japanese confidence = 0.01
+EUC-JP not active
+EUC-JP not active
+GB2312 Chinese confidence = 0.01
+GB2312 Chinese confidence = 0.01
+EUC-KR not active
+EUC-KR not active
+CP949 not active
+CP949 not active
+Big5 not active
+Big5 not active
+EUC-TW not active
+EUC-TW not active

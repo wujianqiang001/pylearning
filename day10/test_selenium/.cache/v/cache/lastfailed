@@ -1,0 +1,5 @@
+{
+  "test_input/test_id.py::test_getid": true, 
+  "test_name.py::test_getname": true, 
+  "test_xpath.py::test_getname": true
+}

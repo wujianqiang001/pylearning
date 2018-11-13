@@ -1,0 +1,10 @@
+{
+  "firstPytest.py::test_case1": true, 
+  "firstPytest.py::test_case2": true, 
+  "saonianApi/run.py": true, 
+  "test_a.py::test_case1": true, 
+  "test_b.py::test_case1": true, 
+  "testsuite/test_a.py::test_case1": true, 
+  "testsuite/test_aa.py::test_case1": true, 
+  "testsuite/test_b.py::test_case1": true
+}

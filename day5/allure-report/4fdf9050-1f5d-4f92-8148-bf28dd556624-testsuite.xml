@@ -1,0 +1,66 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532168297264" stop="1532168297396">
+  <name>firstPytest</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532168297264" status="passed" stop="1532168297282">
+      <name>test_case</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1360-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532168297286" status="failed" stop="1532168297375">
+      <name>test_case1</name>
+      <failure>
+        <message>AssertionError: assert 1 == 2</message>
+        <stack-trace>def test_case1():
+&gt;       assert 1 == 2
+E       assert 1 == 2
+
+firstPytest.py:8: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1360-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532168297380" status="failed" stop="1532168297396">
+      <name>test_case2</name>
+      <failure>
+        <message>AssertionError: assert 2 == 1</message>
+        <stack-trace>def test_case2():
+&gt;       fun(2)
+
+firstPytest.py:11: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = 2
+
+    def fun(a):
+&gt;       assert a == 1
+E       assert 2 == 1
+
+firstPytest.py:3: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="1360-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

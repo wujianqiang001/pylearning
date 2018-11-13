@@ -1,0 +1,46 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532171185423" stop="1532171185529">
+  <name>PyRD.PR2.day5.saonianApi.testsuite.test_b</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532171185423" status="passed" stop="1532171185470">
+      <name>test_main[\u5b58\u5728\u5546\u54c1]</name>
+      <attachments>
+        <attachment source="09585614-8659-4201-8bc8-b3e63377b26d-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="f1a76039-07c1-4955-946d-b9a2b9f0218c-attachment.txt" title="状态码" type="text/plain"/>
+        <attachment source="4d2b3736-6e8a-4940-93f1-f90a124bcfc2-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="story" value="测试模块_demo3"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="issue" value="BUG号：123"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15412-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532171185476" status="passed" stop="1532171185529">
+      <name>test_main[\u65e0login_token]</name>
+      <attachments>
+        <attachment source="4992ed60-a890-4174-a903-040f90b8b709-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="afcf6df8-e7cc-4d73-ad26-17afe7dddda8-attachment.txt" title="状态码" type="text/plain"/>
+        <attachment source="5d608a5f-8c2e-4ef2-8680-9559d2b91271-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="story" value="测试模块_demo3"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="issue" value="BUG号：123"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15412-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

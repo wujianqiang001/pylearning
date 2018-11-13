@@ -1,0 +1,6 @@
+{
+  "test_case.py::test_login_normal": true,
+  "test_case.py::test_note_normal": true,
+  "test_case.py::test_outbound": true,
+  "test_case.py::test_outbound_normal": true
+}

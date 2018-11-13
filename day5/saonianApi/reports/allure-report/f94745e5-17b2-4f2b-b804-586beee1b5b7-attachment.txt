@@ -1,0 +1,2 @@
+connectionpool.py          207 INFO     Starting new HTTP connection (1): api.iamsaonian.com
+connectionpool.py          387 DEBUG    "GET /index.php?a=cart_add&c=Bianli&uuid=941e1aaaba585b952b62c14a3a175a61&goods_id=1195&login_token=4ffc00328b3af66bf3333e72670cf0fd&m=Api&shop_id=31 HTTP/1.1" 200 None

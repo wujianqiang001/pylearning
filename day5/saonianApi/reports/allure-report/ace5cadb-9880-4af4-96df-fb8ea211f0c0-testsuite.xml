@@ -1,0 +1,93 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532171185185" stop="1532171185415">
+  <name>PyRD.PR2.day5.saonianApi.testsuite.test_a</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532171185185" status="failed" stop="1532171185350">
+      <name>test_main[\u5b58\u5728\u5546\u54c1]</name>
+      <failure>
+        <message>IndexError: list index out of range</message>
+        <stack-trace>testcase = '存在商品', method = 'get'
+url = 'http://api.iamsaonian.com/index.php'
+body = {'a': 'cart_add', 'c': 'Bianli', 'goods_id': '1195', 'login_token': '4ffc00328b3af66bf3333e72670cf0fd', ...}
+expection = {'errmsg': '返回成功', 'errno': '200'}
+
+    @allure.feature("测试模块_demo1")           # 功能块，feature功能分块时比story大,即同时存在feature和story时,feature为父节点
+    @allure.story("测试模块_demo2")             # 功能块，具有相同feature或story的用例将规整到相同模块下,执行时可用于筛选
+    @allure.issue("BUG号：123")                 # 问题表识，关联标识已有的问题，可为一个url链接地址
+    @allure.testcase("用例名：订单查询")
+    @pytest.mark.parametrize("testcase,method,url,body,expection",
+                             cases,
+                             ids=[a[0] for a in cases])
+    def test_main(testcase,method,url,body,expection):
+        paras = vars()
+        allure.environment(host=host, test_vars=paras)
+        allure.attach("测试用例",testcase)
+        body = json.loads(body)
+        body["uuid"] = uuid
+        if body.get("login_token"):
+            body["login_token"] = login_token
+        url = "http://%s"%host+url
+        expection = json.loads(expection)
+        method = method
+&gt;       r = request(method,url,body,expection)
+
+testsuite\test_a.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+method = 'get', url = 'http://api.iamsaonian.com/index.php'
+body = {'a': 'cart_add', 'c': 'Bianli', 'goods_id': '1195', 'login_token': '4ffc00328b3af66bf3333e72670cf0fd', ...}
+expection = {'errmsg': '返回成功', 'errno': '200'}
+
+    def request(method,url,body,expection):
+        if method == "get":
+            r = requests.get(url,params=body)
+            try:
+                content = r.json()
+                # print(content)
+                check(content,expection)
+            except:
+                content=r.text
+&gt;               url = re.findall("href=\"(.+?)\"",content)[0]
+E               IndexError: list index out of range
+
+com\request.py:15: IndexError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="a4016d00-366b-4856-a263-4a5a2c4b08b4-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="f94745e5-17b2-4f2b-b804-586beee1b5b7-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="issue" value="BUG号：123"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15412-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532171185362" status="passed" stop="1532171185415">
+      <name>test_main[\u65e0login_token]</name>
+      <attachments>
+        <attachment source="712a59cb-4dbf-4c8a-a81e-38b6af5876e2-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="836804b0-2ada-4812-ba53-a02988d73ace-attachment.txt" title="状态码" type="text/plain"/>
+        <attachment source="34bc6f03-c320-4110-afab-9e2366336971-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="testId" value="用例名：订单查询"/>
+        <label name="issue" value="BUG号：123"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="15412-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

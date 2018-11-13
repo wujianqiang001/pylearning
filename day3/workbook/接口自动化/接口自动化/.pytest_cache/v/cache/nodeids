@@ -1,0 +1,5 @@
+[
+  "testcase/tase_all/test_case.py::test_login_normal",
+  "testcase/tase_all/test_case.py::test_note_normal",
+  "testcase/tase_all/test_case.py::test_outbound"
+]

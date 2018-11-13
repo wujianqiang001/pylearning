@@ -1,0 +1,707 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1533219571778" stop="1533219572814">
+  <name>api.testsuite.test_home</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1533219571778" status="passed" stop="1533219571898">
+      <name>test_main[\u8bbe\u5907\u60c5\u51b5\u7edf\u8ba1]</name>
+      <attachments>
+        <attachment source="c7358564-6f08-4a6f-a821-06a538402e76-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="c6eec1c4-ae73-4be2-ad77-4b7010d7db85-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219571928" status="passed" stop="1533219572018">
+      <name>test_main[\u5f02\u5e38\u62a5\u8b66\u60c5\u51b5]</name>
+      <attachments>
+        <attachment source="22d8dd93-688b-46ec-962f-85be62e45017-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="9ce6456e-3b8b-496c-b4b9-8429aff36a26-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572059" status="passed" stop="1533219572096">
+      <name>test_main[\u7b80\u4ecb]</name>
+      <attachments>
+        <attachment source="1510171a-0d6f-4bd0-947c-fc273867e735-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="261287b5-d89f-4db1-84e2-7ff4d15c5a43-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572126" status="passed" stop="1533219572226">
+      <name>test_main[\u9ed8\u8ba4\u5206\u7ec4\u6570\u636e]</name>
+      <attachments>
+        <attachment source="ab5e1cce-9f45-482d-92dc-d23c007dc31d-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="ed7882ea-ca92-47ee-a706-20157deb1a21-attachment.txt" title="状态码" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572266" status="failed" stop="1533219572526">
+      <name>test_main[\u6240\u6709\u8282\u70b9]</name>
+      <failure>
+        <message>AssertionError: </message>
+        <stack-trace>method = 'post', url = 'http://221.123.191.53:8123/SmartCityV2/GetGroupNodeShow'
+body = ''
+expection = [{'APOID': '', 'AddNodeCount': 0, 'Address': None, 'AlarmReason': None, ...}, {'APOID': '', 'AddNodeCount': 0, 'Addres...ss': None, 'AlarmReason': None, ...}, {'APOID': '', 'AddNodeCount': 0, 'Address': None, 'AlarmReason': None, ...}, ...]
+
+    def request(method,url,body,expection):
+        if method == "get":
+            r = requests.get(url,params=body)
+            try:
+                content = r.json()
+                check_pytest(expection,content)
+            except:
+                content = r.text
+                url = re.findall("href=\"(.+?)\"",content)[0]
+                r = requests.get(url)
+                content = r.json()
+                print(type(content))
+                check_pytest(expection,content)
+            return r
+        if  method == "post":
+            cookies = {"PublicParam":"LoginUrl=http://221.123.191.53:8123/#","ASP.NET_SessionId":"pmteck01ngbvrny31ktc4xtz"}
+            r = requests.post(url,data=body,cookies = cookies)
+            try:
+&gt;               content = r.json()
+
+com\request.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Response [500]&gt;, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Returns the json-encoded content of a response, if any.
+    
+            :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+            :raises ValueError: If the response body does not contain valid json.
+            """
+    
+        if not self.encoding and self.content and len(self.content) &gt; 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using chardet to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(
+                        self.content.decode(encoding), **kwargs
+                    )
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+&gt;       return complexjson.loads(self.text, **kwargs)
+
+d:\python\lib\site-packages\requests\models.py:892: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+encoding = None, cls = None, object_hook = None, parse_float = None
+parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, encoding=None, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str`` instance containing a JSON
+        document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders that rely on the
+        order that the key and value pairs are decoded (for example,
+        collections.OrderedDict will remember the order of insertion). If
+        ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN, null, true, false.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+    
+        The ``encoding`` argument is ignored and deprecated.
+    
+        """
+        if not isinstance(s, str):
+            raise TypeError('the JSON object must be str, not {!r}'.format(
+                                s.__class__.__name__))
+        if s.startswith(u'\ufeff'):
+            raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                  s, 0)
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+d:\python\lib\json\__init__.py:319: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x00000000030613C8&gt;
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+_w = &lt;built-in method match of _sre.SRE_Pattern object at 0x000000000303B3F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+            containing a JSON document).
+    
+            """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+d:\python\lib\json\decoder.py:339: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x00000000030613C8&gt;
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+            a JSON document) and return a 2-tuple of the Python
+            representation and the index in ``s`` where the document ended.
+    
+            This can be used to decode a JSON document from a string that may
+            have extraneous data at the end.
+    
+            """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+d:\python\lib\json\decoder.py:357: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+testcase = '所有节点', method = 'post'
+url = 'http://221.123.191.53:8123/SmartCityV2/GetGroupNodeShow', body = ''
+expection = [{'APOID': '', 'AddNodeCount': 0, 'Address': None, 'AlarmReason': None, ...}, {'APOID': '', 'AddNodeCount': 0, 'Addres...ss': None, 'AlarmReason': None, ...}, {'APOID': '', 'AddNodeCount': 0, 'Address': None, 'AlarmReason': None, ...}, ...]
+
+    @allure.feature("测试模块_demo1")           # 功能块，feature功能分块时比story大,即同时存在feature和story时,feature为父节点
+    @allure.story("测试模块_demo2")             # 功能块，具有相同feature或story的用例将规整到相同模块下,执行时可用于筛选
+    @allure.issue("BUG号：123")                 # 问题表识，关联标识已有的问题，可为一个url链接地址
+    @allure.testcase("用例名：首页")
+    @pytest.mark.parametrize("testcase,method,url,body,expection",cases,ids=[a[0] for a in cases])
+    def test_main(testcase,method,url,body,expection):
+        paras = vars()
+        allure.environment(host=host, test_vars=paras)
+        allure.attach("测试用例",testcase)
+        url = "http://%s"%host+url
+        expection = json.loads(expection)
+        method = method
+&gt;       r = request(method,url,body,expection)
+
+testsuite\test_home.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+com\request.py:25: in request
+    check_pytest(expection,content)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+expection = [{'APOID': '', 'AddNodeCount': 0, 'Address': None, 'AlarmReason': None, ...}, {'APOID': '', 'AddNodeCount': 0, 'Addres...ss': None, 'AlarmReason': None, ...}, {'APOID': '', 'AddNodeCount': 0, 'Address': None, 'AlarmReason': None, ...}, ...]
+content = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+
+    def check_pytest(expection,content):#参数为实际结果与预期结果
+        for k in expection:#遍历预期结果
+            if isinstance(k,str):#判断是否为字典
+                assert expection == content#断言结果
+            elif isinstance(expection[0],dict):
+&gt;               assert expection == content
+E               AssertionError
+
+com\check.py:7: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="cf24338e-e065-40b1-85a0-a4760779cfe2-attachment.txt" title="测试用例" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572546" status="failed" stop="1533219572666">
+      <name>test_main[\u641c\u7d22\u8bbe\u5907]</name>
+      <failure>
+        <message>AssertionError: </message>
+        <stack-trace>method = 'post', url = 'http://221.123.191.53:8123/SmartCityV2/GetNodeDetail'
+body = '{"nodeid":"3f138561-0363-49c7-82ec-c6baffda66a4"}'
+expection = {'menu_list': [{'HasPara': False, 'ID': 'be7e7681-475a-4ebb-8bb5-695469613a73', 'Name': '恢复正常'}], 'nodedetail': {'Addr...Name': '井盖-信号', 'SensorIconName': '/Upload/Sensor/d6fe6d45-ae95-4b6c-893e-c798554be18b.png', 'SensorState': '强', ...}]}
+
+    def request(method,url,body,expection):
+        if method == "get":
+            r = requests.get(url,params=body)
+            try:
+                content = r.json()
+                check_pytest(expection,content)
+            except:
+                content = r.text
+                url = re.findall("href=\"(.+?)\"",content)[0]
+                r = requests.get(url)
+                content = r.json()
+                print(type(content))
+                check_pytest(expection,content)
+            return r
+        if  method == "post":
+            cookies = {"PublicParam":"LoginUrl=http://221.123.191.53:8123/#","ASP.NET_SessionId":"pmteck01ngbvrny31ktc4xtz"}
+            r = requests.post(url,data=body,cookies = cookies)
+            try:
+&gt;               content = r.json()
+
+com\request.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Response [500]&gt;, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Returns the json-encoded content of a response, if any.
+    
+            :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+            :raises ValueError: If the response body does not contain valid json.
+            """
+    
+        if not self.encoding and self.content and len(self.content) &gt; 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using chardet to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(
+                        self.content.decode(encoding), **kwargs
+                    )
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+&gt;       return complexjson.loads(self.text, **kwargs)
+
+d:\python\lib\site-packages\requests\models.py:892: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+encoding = None, cls = None, object_hook = None, parse_float = None
+parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, encoding=None, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str`` instance containing a JSON
+        document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders that rely on the
+        order that the key and value pairs are decoded (for example,
+        collections.OrderedDict will remember the order of insertion). If
+        ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN, null, true, false.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+    
+        The ``encoding`` argument is ignored and deprecated.
+    
+        """
+        if not isinstance(s, str):
+            raise TypeError('the JSON object must be str, not {!r}'.format(
+                                s.__class__.__name__))
+        if s.startswith(u'\ufeff'):
+            raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                  s, 0)
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+d:\python\lib\json\__init__.py:319: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x00000000030613C8&gt;
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+_w = &lt;built-in method match of _sre.SRE_Pattern object at 0x000000000303B3F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+            containing a JSON document).
+    
+            """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+d:\python\lib\json\decoder.py:339: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x00000000030613C8&gt;
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+            a JSON document) and return a 2-tuple of the Python
+            representation and the index in ``s`` where the document ended.
+    
+            This can be used to decode a JSON document from a string that may
+            have extraneous data at the end.
+    
+            """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+d:\python\lib\json\decoder.py:357: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+testcase = '搜索设备', method = 'post'
+url = 'http://221.123.191.53:8123/SmartCityV2/GetNodeDetail'
+body = '{"nodeid":"3f138561-0363-49c7-82ec-c6baffda66a4"}'
+expection = {'menu_list': [{'HasPara': False, 'ID': 'be7e7681-475a-4ebb-8bb5-695469613a73', 'Name': '恢复正常'}], 'nodedetail': {'Addr...Name': '井盖-信号', 'SensorIconName': '/Upload/Sensor/d6fe6d45-ae95-4b6c-893e-c798554be18b.png', 'SensorState': '强', ...}]}
+
+    @allure.feature("测试模块_demo1")           # 功能块，feature功能分块时比story大,即同时存在feature和story时,feature为父节点
+    @allure.story("测试模块_demo2")             # 功能块，具有相同feature或story的用例将规整到相同模块下,执行时可用于筛选
+    @allure.issue("BUG号：123")                 # 问题表识，关联标识已有的问题，可为一个url链接地址
+    @allure.testcase("用例名：首页")
+    @pytest.mark.parametrize("testcase,method,url,body,expection",cases,ids=[a[0] for a in cases])
+    def test_main(testcase,method,url,body,expection):
+        paras = vars()
+        allure.environment(host=host, test_vars=paras)
+        allure.attach("测试用例",testcase)
+        url = "http://%s"%host+url
+        expection = json.loads(expection)
+        method = method
+&gt;       r = request(method,url,body,expection)
+
+testsuite\test_home.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+com\request.py:25: in request
+    check_pytest(expection,content)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+expection = {'menu_list': [{'HasPara': False, 'ID': 'be7e7681-475a-4ebb-8bb5-695469613a73', 'Name': '恢复正常'}], 'nodedetail': {'Addr...Name': '井盖-信号', 'SensorIconName': '/Upload/Sensor/d6fe6d45-ae95-4b6c-893e-c798554be18b.png', 'SensorState': '强', ...}]}
+content = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+
+    def check_pytest(expection,content):#参数为实际结果与预期结果
+        for k in expection:#遍历预期结果
+            if isinstance(k,str):#判断是否为字典
+&gt;               assert expection == content#断言结果
+E               AssertionError
+
+com\check.py:5: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="1943b98c-6b1d-4b49-9ea9-728ae9c2d4d7-attachment.txt" title="测试用例" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1533219572696" status="failed" stop="1533219572814">
+      <name>test_main[\u4e0b\u53d1\u6307\u4ee4]</name>
+      <failure>
+        <message>AssertionError: </message>
+        <stack-trace>method = 'post', url = 'http://221.123.191.53:8123/SmartCityV2/SendCmd_ByNode'
+body = '{"NodeID":"3f138561-0363-49c7-82ec-c6baffda66a4"\n"menuID":"be7e7681-475a-4ebb-8bb5-695469613a73"\n"para":""}'
+expection = {'Code': 1, 'Data': None, 'Message': ''}
+
+    def request(method,url,body,expection):
+        if method == "get":
+            r = requests.get(url,params=body)
+            try:
+                content = r.json()
+                check_pytest(expection,content)
+            except:
+                content = r.text
+                url = re.findall("href=\"(.+?)\"",content)[0]
+                r = requests.get(url)
+                content = r.json()
+                print(type(content))
+                check_pytest(expection,content)
+            return r
+        if  method == "post":
+            cookies = {"PublicParam":"LoginUrl=http://221.123.191.53:8123/#","ASP.NET_SessionId":"pmteck01ngbvrny31ktc4xtz"}
+            r = requests.post(url,data=body,cookies = cookies)
+            try:
+&gt;               content = r.json()
+
+com\request.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Response [500]&gt;, kwargs = {}
+
+    def json(self, **kwargs):
+        r"""Returns the json-encoded content of a response, if any.
+    
+            :param \*\*kwargs: Optional arguments that ``json.loads`` takes.
+            :raises ValueError: If the response body does not contain valid json.
+            """
+    
+        if not self.encoding and self.content and len(self.content) &gt; 3:
+            # No encoding set. JSON RFC 4627 section 3 states we should expect
+            # UTF-8, -16 or -32. Detect which one to use; If the detection or
+            # decoding fails, fall back to `self.text` (using chardet to make
+            # a best guess).
+            encoding = guess_json_utf(self.content)
+            if encoding is not None:
+                try:
+                    return complexjson.loads(
+                        self.content.decode(encoding), **kwargs
+                    )
+                except UnicodeDecodeError:
+                    # Wrong UTF codec detected; usually because it's not UTF-8
+                    # but some other 8-bit codec.  This is an RFC violation,
+                    # and the server didn't bother to tell us what codec *was*
+                    # used.
+                    pass
+&gt;       return complexjson.loads(self.text, **kwargs)
+
+d:\python\lib\site-packages\requests\models.py:892: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+encoding = None, cls = None, object_hook = None, parse_float = None
+parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}
+
+    def loads(s, encoding=None, cls=None, object_hook=None, parse_float=None,
+            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):
+        """Deserialize ``s`` (a ``str`` instance containing a JSON
+        document) to a Python object.
+    
+        ``object_hook`` is an optional function that will be called with the
+        result of any object literal decode (a ``dict``). The return value of
+        ``object_hook`` will be used instead of the ``dict``. This feature
+        can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+    
+        ``object_pairs_hook`` is an optional function that will be called with the
+        result of any object literal decoded with an ordered list of pairs.  The
+        return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+        This feature can be used to implement custom decoders that rely on the
+        order that the key and value pairs are decoded (for example,
+        collections.OrderedDict will remember the order of insertion). If
+        ``object_hook`` is also defined, the ``object_pairs_hook`` takes priority.
+    
+        ``parse_float``, if specified, will be called with the string
+        of every JSON float to be decoded. By default this is equivalent to
+        float(num_str). This can be used to use another datatype or parser
+        for JSON floats (e.g. decimal.Decimal).
+    
+        ``parse_int``, if specified, will be called with the string
+        of every JSON int to be decoded. By default this is equivalent to
+        int(num_str). This can be used to use another datatype or parser
+        for JSON integers (e.g. float).
+    
+        ``parse_constant``, if specified, will be called with one of the
+        following strings: -Infinity, Infinity, NaN, null, true, false.
+        This can be used to raise an exception if invalid JSON numbers
+        are encountered.
+    
+        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+        kwarg; otherwise ``JSONDecoder`` is used.
+    
+        The ``encoding`` argument is ignored and deprecated.
+    
+        """
+        if not isinstance(s, str):
+            raise TypeError('the JSON object must be str, not {!r}'.format(
+                                s.__class__.__name__))
+        if s.startswith(u'\ufeff'):
+            raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+                                  s, 0)
+        if (cls is None and object_hook is None and
+                parse_int is None and parse_float is None and
+                parse_constant is None and object_pairs_hook is None and not kw):
+&gt;           return _default_decoder.decode(s)
+
+d:\python\lib\json\__init__.py:319: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x00000000030613C8&gt;
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+_w = &lt;built-in method match of _sre.SRE_Pattern object at 0x000000000303B3F0&gt;
+
+    def decode(self, s, _w=WHITESPACE.match):
+        """Return the Python representation of ``s`` (a ``str`` instance
+            containing a JSON document).
+    
+            """
+&gt;       obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+
+d:\python\lib\json\decoder.py:339: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;json.decoder.JSONDecoder object at 0x00000000030613C8&gt;
+s = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+            a JSON document) and return a 2-tuple of the Python
+            representation and the index in ``s`` where the document ended.
+    
+            This can be used to decode a JSON document from a string that may
+            have extraneous data at the end.
+    
+            """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+d:\python\lib\json\decoder.py:357: JSONDecodeError
+
+During handling of the above exception, another exception occurred:
+
+testcase = '下发指令', method = 'post'
+url = 'http://221.123.191.53:8123/SmartCityV2/SendCmd_ByNode'
+body = '{"NodeID":"3f138561-0363-49c7-82ec-c6baffda66a4"\n"menuID":"be7e7681-475a-4ebb-8bb5-695469613a73"\n"para":""}'
+expection = {'Code': 1, 'Data': None, 'Message': ''}
+
+    @allure.feature("测试模块_demo1")           # 功能块，feature功能分块时比story大,即同时存在feature和story时,feature为父节点
+    @allure.story("测试模块_demo2")             # 功能块，具有相同feature或story的用例将规整到相同模块下,执行时可用于筛选
+    @allure.issue("BUG号：123")                 # 问题表识，关联标识已有的问题，可为一个url链接地址
+    @allure.testcase("用例名：首页")
+    @pytest.mark.parametrize("testcase,method,url,body,expection",cases,ids=[a[0] for a in cases])
+    def test_main(testcase,method,url,body,expection):
+        paras = vars()
+        allure.environment(host=host, test_vars=paras)
+        allure.attach("测试用例",testcase)
+        url = "http://%s"%host+url
+        expection = json.loads(expection)
+        method = method
+&gt;       r = request(method,url,body,expection)
+
+testsuite\test_home.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+com\request.py:25: in request
+    check_pytest(expection,content)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+expection = {'Code': 1, 'Data': None, 'Message': ''}
+content = '&lt;!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n    &lt;head&gt;\r\n        &lt;title&gt;运行时错误&lt;/title&gt;\r\n        &lt;meta name="viewport" content="wid...       &lt;/td&gt;\r\n               &lt;/tr&gt;\r\n            &lt;/table&gt;\r\n\r\n            &lt;br&gt;\r\n\r\n    &lt;/body&gt;\r\n&lt;/html&gt;\r\n'
+
+    def check_pytest(expection,content):#参数为实际结果与预期结果
+        for k in expection:#遍历预期结果
+            if isinstance(k,str):#判断是否为字典
+&gt;               assert expection == content#断言结果
+E               AssertionError
+
+com\check.py:5: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="04f8a890-cadc-4f90-aa85-1566192fc1c6-attachment.txt" title="测试用例" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：首页"/>
+        <label name="feature" value="测试模块_demo1"/>
+        <label name="story" value="测试模块_demo2"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="6636-MainThread"/>
+        <label name="host" value="USER-SUR9586JK2"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
