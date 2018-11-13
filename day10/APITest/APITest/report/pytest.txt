@@ -1,0 +1,26 @@
+F pytest.py::test_answer
+ def test_answer():
+ >       assert inc(3) == 5
+ E       assert 4 == 5
+ E        +  where 4 = inc(3)
+ 
+ pytest.py:14: AssertionError
+F pytest.py::test_wcf
+ def test_wcf():
+ >       assert inc(3) > 5
+ E       assert 4 > 5
+ E        +  where 4 = inc(3)
+ 
+ pytest.py:17: AssertionError
+. pytest.py::test_hy
+. pytest.py::TestClass::()::test_one
+F pytest.py::TestClass::()::test_two
+ self = <APITest.pytest.TestClass object at 0x0000000003BD99E8>
+ 
+     def test_two(self):
+         x = "hello"
+ >       assert hasattr(x,"name")
+ E       AssertionError: assert False
+ E        +  where False = hasattr('hello', 'name')
+ 
+ pytest.py:28: AssertionError

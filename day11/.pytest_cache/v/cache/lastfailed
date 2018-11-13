@@ -1,0 +1,5 @@
+{
+  "testsuits/test_menu.py": true,
+  "testsuits/test_order.py": true,
+  "testsuits/test_ordor.py": true
+}

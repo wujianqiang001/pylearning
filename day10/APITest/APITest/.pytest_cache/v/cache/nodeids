@@ -1,0 +1,7 @@
+[
+  "pytest.py::test_answer",
+  "pytest.py::test_wcf",
+  "pytest.py::test_hy",
+  "pytest.py::TestClass::()::test_one",
+  "pytest.py::TestClass::()::test_two"
+]

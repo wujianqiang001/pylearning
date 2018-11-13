@@ -1,0 +1,44 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532771109143" stop="1532771109445">
+  <name>PyRD.PR1.day11.testsuits.test_menu</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532771109143" status="passed" stop="1532771109400">
+      <name>test_main_menu[\u6b63\u5e38\u8ba2\u5355]</name>
+      <attachments>
+        <attachment source="a5067a70-9f7e-456b-9688-0a70b0766c93-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="36579a06-fc1f-4de5-9a0a-f6c284a6779b-attachment.txt" title="请求url" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：订单查询类"/>
+        <label name="story" value="测试模块_menu"/>
+        <label name="feature" value="测试模块_meitu"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="2492-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532771109404" status="passed" stop="1532771109445">
+      <name>test_main_menu[\u65e0\u5e97\u94fa]</name>
+      <attachments>
+        <attachment source="ca351c42-8771-40bf-a467-8e7ea29bf9c2-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="1ec81419-dc42-48e0-850d-12c2a22ac2b8-attachment.txt" title="请求url" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="issue" value="BUG号：123"/>
+        <label name="testId" value="用例名：订单查询类"/>
+        <label name="story" value="测试模块_menu"/>
+        <label name="feature" value="测试模块_meitu"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="2492-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

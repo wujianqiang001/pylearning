@@ -1,0 +1,63 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532771304706" stop="1532771305294">
+  <name>PyRD.PR1.day11.testsuits.test_order</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1532771304706" status="passed" stop="1532771304774">
+      <name>test_main_order[\u6b63\u5e38\u8ba2\u5355]</name>
+      <attachments>
+        <attachment source="5d89a7d1-9646-4852-b833-28876d29e081-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="103a3d2b-1f35-4d48-97f7-3a8c32f0cd36-attachment.txt" title="请求url" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="feature" value="测试模块_meitu"/>
+        <label name="testId" value="用例名：目录查询类"/>
+        <label name="story" value="测试模块_order"/>
+        <label name="issue" value="BUG号：345"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3356-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532771304794" status="passed" stop="1532771304834">
+      <name>test_main_order[\u65e0\u5e97\u94fa]</name>
+      <attachments>
+        <attachment source="4b0c2268-bfb2-402c-97bf-56ce50de615d-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="5076539e-990a-404f-8233-19282d1463ea-attachment.txt" title="请求url" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="feature" value="测试模块_meitu"/>
+        <label name="testId" value="用例名：目录查询类"/>
+        <label name="story" value="测试模块_order"/>
+        <label name="issue" value="BUG号：345"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3356-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1532771304838" status="passed" stop="1532771305294">
+      <name>test_main_order[\u5e93\u5b58\u4e0d\u8db3]</name>
+      <attachments>
+        <attachment source="2738678f-a468-4fe0-a8d4-a9116eada881-attachment.txt" title="测试用例" type="text/plain"/>
+        <attachment source="e9cd5b96-ae6f-43f9-837d-8bea413b4062-attachment.txt" title="请求url" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="feature" value="测试模块_meitu"/>
+        <label name="testId" value="用例名：目录查询类"/>
+        <label name="story" value="测试模块_order"/>
+        <label name="issue" value="BUG号：345"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3356-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,0 +1,9 @@
+atbd12345|apple|5.50|2|1|11.00|tony|beijing
+atb345|apple|5.50|2|1|11.00|tony|beijing
+atg12345|apple|5.50|2|1|11.00|tony|beijing
+atb123455|apple|5.50|2|1|11.00|tony|beijing
+atb12345|Apple|5.50|2|1|11.00|tony|beijing
+ctb12345|apple|5.50|2|1|11.00|tony|beijing
+atb12345|apple|5.50|2|1|11.00|tony
+ctb12345|apple|5.50|2|1|11.00|tony|beijing
+atb12345|apple|5.50|2|1|11.00|tony

@@ -1,0 +1,1 @@
+http://api.iamsaonian.com/index.php?m=Api&c=Bianli&a=cart_add&uuid=941e1aaaba585b952b62c14a3a175a61&login_token=61f53325551c57988bda718ad5880da6&goods_num=1&goods_id=1195&shop_id=3100

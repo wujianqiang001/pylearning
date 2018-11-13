@@ -1,0 +1,819 @@
+<html><head><title>Burp Scanner Report</title>
+<style type="text/css">
+body { background: #dedede; font-family: Arial, sans-serif; color: #404042; -webkit-font-smoothing: antialiased; }
+#container { width: 930px; padding: 0 15px; margin: 20px auto; background-color: #ffffff; }
+table { font-family: Arial, sans-serif; }
+a:link, a:visited { color: #e06228; text-decoration: none; }
+a:hover, a:active { color: #404042; text-decoration: underline; }
+h1 { font-size: 1.6em; line-height: 1.2em; font-weight: normal; color: #404042; }
+h2 { font-size: 1.3em; line-height: 1.2em; padding: 0; margin: 0.8em 0 0.3em 0; font-weight: normal; color: #404042;}
+.rule { height: 0px; border-top: 1px solid #404042; padding: 0; margin: 20px -15px 0 -15px; }
+.title { color: #ffffff; background: #e06228; padding: 10px 15px; margin: 0 -15px 10px -15px; overflow: hidden; }
+.title h1 { color: #ffffff; padding: 0; margin: 0; font-size: 1.8em; }
+.title img { float: right; display: inline; padding: 0; margin: -3px -5px; }
+.heading { background: #404042; margin: 0 -15px 10px -15px; padding: 0; display: inline-block; overflow: hidden; }
+.heading img { float: right; display: inline; margin: 8px 10px 0 10px; padding: 0; }
+table.overview_table { border: 1px solid #c0c0c0; margin: 0; padding: 5px; }
+table.overview_table td.info { padding: 5px; background: #dedede; text-align: right; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; }
+table.overview_table td.info_end { padding: 5px; background: #dedede; text-align: right; border-top: 2px solid #ffffff; }
+table.overview_table td.colour_holder { padding: 0px; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; }
+table.overview_table td.colour_holder_end { padding: 0px; border-top: 2px solid #ffffff; }
+table.overview_table td.label { padding: 5px; font-weight: bold; }
+table.summary_table td { padding: 5px; background: #dedede; text-align: left; border-top: 2px solid #ffffff; border-right: 2px solid #ffffff; }
+table.summary_table td.icon { background: #404042; }
+.colour_block { padding: 5px; text-align: right; display: block; font-weight: bold; }
+.high_certain { border: 2px solid #f00; background: #f00; }
+.high_firm { border: 2px solid #f66; background: #f66; }
+.high_tentative { border: 2px solid #fcc; background: #fcc; }
+.medium_certain { border: 2px solid #f90; background: #f90; }
+.medium_firm { border: 2px solid #ffc266; background: #ffc266; }
+.medium_tentative { border: 2px solid #ffebcc; background: #ffebcc; }
+.low_certain { border: 2px solid #fe0; background: #fe0; }
+.low_firm { border: 2px solid #fff566; background: #fff566; }
+.low_tentative { border: 2px solid #fffccc; background: #fffccc; }
+.info_certain { border: 2px solid #ababab; background: #ababab; }
+.info_firm { border: 2px solid #cdcdcd; background: #cdcdcd; }
+.info_tentative { border: 2px solid #eee; background: #eee; }
+.row_total { border: 1px solid #dedede; background: #fff; }
+.grad_mark { padding: 4px; border-left: 1px solid #404042; display: inline-block; }
+.bar { margin-top: 3px; }
+.TOCH0 { font-size: 1.0em; font-weight: bold; word-wrap: break-word; }
+.TOCH1 { font-size: 0.8em; text-indent: -20px; padding-left: 50px; margin: 0; word-wrap: break-word; }
+.TOCH2 { font-size: 0.8em; text-indent: -20px; padding-left: 70px; margin: 0; word-wrap: break-word; }
+.BODH0 { font-size: 1.6em; line-height: 1.2em; font-weight: normal; padding: 10px 15px; margin: 0 -15px 10px -15px; display: inline-block; color: #ffffff; background-color: #e06228; width: 100%; word-wrap: break-word; }
+.BODH1 { font-size: 1.3em; line-height: 1.2em; font-weight: normal; padding: 13px 15px; margin: 0 -15px 0 -15px; display: inline-block; width: 100%; word-wrap: break-word; }
+.BODH2 { font-size: 1.0em; font-weight: bold; line-height: 2.0em; width: 100%; word-wrap: break-word; }
+.PREVNEXT { font-size: 0.7em; font-weight: bold; color: #ffffff; padding: 2px 5px; }
+.PREVNEXT:link, .PREVNEXT:visited { color: #e06228 !important; background: #ffffff !important; border: 1px solid #e06228 !important; text-decoration: none; }
+.PREVNEXT:hover, .PREVNEXT:active { color: #404042 !important; background: #e06228 !important; border: 1px solid #e06228 !important; text-decoration: none; }
+.TEXT { font-size: 0.8em; padding: 0; margin: 0; word-wrap: break-word; }
+TD { font-size: 0.8em; }
+.HIGHLIGHT { background-color: yellow; }
+.rr_div { background-color: #dedede; border: 2px solid #404042; width: 916px; word-wrap: break-word; -ms-word-wrap: break-word; margin: 0.8em 0; padding: 5px; font-size: 0.8em; max-height: 300px; overflow-y: auto; }
+
+@media print {
+    body { width: 100%; color: #000000; position: relative; }
+    #container { width: 98%; padding: 0; margin: 0; }
+    h1 { color: #000000; }
+    h2 { color: #000000;}
+    .rule { margin: 20px 0 0 0; }
+    .title { color: #000000; margin: 0 0 10px 0; padding: 10px 0; }
+    .title h1 { color: #000000; }
+    .title img { margin: -3px 0; }
+    .heading { margin: 0 0 10px 0; }
+    .BODH0 { color: #000000; }
+    .BODH1 { color: #000000; }
+    .PREVNEXT { visibility: hidden; display: none; }
+    .rr_div { width: 98%; margin: 0.8em auto; max-height: none !important; overflow: hidden; }
+}
+
+</style>
+<!--[if lt IE 8 ]> <style type="text/css"> 
+    body { text-align: center; }
+    #container { text-align: left; }
+    .rr_div { width: 896px; }
+</style> <![endif]-->
+<!--[if IE 8 ]> <style type="text/css"> 
+    .colour_block { padding: 10px 5px; }
+</style> <![endif]-->
+<!--[if gt IE 8 ]> <style type="text/css"> 
+    .colour_block { padding: 12px 5px; }
+</style> <![endif]-->
+</head>
+<body>
+<div id="container">
+<div class="title"><img src="images/burp-suite.gif" width="166" height="46"><h1>Burp Scanner Report</h1></div>
+<h1>Summary</h1>
+<span class="TEXT">The table below shows the numbers of issues identified in different categories. Issues are classified according to severity as High, Medium, Low or Information. This reflects the likely impact of each issue for a typical organization. Issues are also classified according to confidence as Certain, Firm or Tentative. This reflects the inherent reliability of the technique that was used to identify the issue.</span><br><br><table cellpadding="0" cellspacing="0" class="overview_table">
+    <tr>
+        <td width="70">&nbsp;</td>
+        <td width="90">&nbsp;</td>
+        <td colspan="4" height="40" align="center" class="label">Confidence</td>
+    </tr>
+    <tr>
+        <td width="70">&nbsp;</td>
+        <td width="90">&nbsp;</td>
+        <td width="82" height="30" class="info">Certain</td>
+        <td width="82" height="30" class="info">Firm</td>
+        <td width="82" height="30" class="info">Tentative</td>
+        <td width="82" height="30" class="info_end">Total</td>
+    </tr>
+    <tr>
+        <td rowspan="4" valign="middle" class="label">Severity</td>
+        <td class="info" height="30">High</td>
+        <td class="colour_holder"><span class="colour_block high_certain">1</span></td>
+        <td class="colour_holder"><span class="colour_block high_firm">0</span></td>
+        <td class="colour_holder"><span class="colour_block high_tentative">0</span></td>
+        <td class="colour_holder_end"><span class="colour_block row_total">1</span></td>
+    </tr>
+    <tr>
+        <td class="info" height="30">Medium</td>
+        <td class="colour_holder"><span class="colour_block medium_certain">0</span></td>
+        <td class="colour_holder"><span class="colour_block medium_firm">0</span></td>
+        <td class="colour_holder"><span class="colour_block medium_tentative">0</span></td>
+        <td class="colour_holder_end"><span class="colour_block row_total">0</span></td>
+    </tr>
+    <tr>
+        <td class="info" height="30">Low</td>
+        <td class="colour_holder"><span class="colour_block low_certain">2</span></td>
+        <td class="colour_holder"><span class="colour_block low_firm">0</span></td>
+        <td class="colour_holder"><span class="colour_block low_tentative">0</span></td>
+        <td class="colour_holder_end"><span class="colour_block row_total">2</span></td>
+    </tr>
+    <tr>
+        <td class="info" height="30">Information</td>
+        <td class="colour_holder"><span class="colour_block info_certain">7</span></td>
+        <td class="colour_holder"><span class="colour_block info_firm">9</span></td>
+        <td class="colour_holder"><span class="colour_block info_tentative">0</span></td>
+        <td class="colour_holder_end"><span class="colour_block row_total">16</span></td>
+    </tr>
+</table><br>
+<span class="TEXT">The chart below shows the aggregated numbers of issues identified in each category. Solid colored bars represent issues with a confidence level of Certain, and the bars fade as the confidence level falls.</span><br><br><table cellpadding="0" cellspacing="0" class="overview_table">
+    <tr>
+        <td width="70">&nbsp;</td>
+        <td width="90">&nbsp;</td>
+        <td colspan="6" height="40" align="center" class="label">Number of issues</td>
+    </tr>
+    <tr>
+        <td width="70">&nbsp;</td>
+        <td width="90">&nbsp;</td>
+        <td width="125"><span class="grad_mark">0</span></td>
+        <td width="125"><span class="grad_mark">1</span></td>
+        <td width="125"><span class="grad_mark">2</span></td>
+        <td width="125"><span class="grad_mark">3</span></td>
+        <td width="125"><span class="grad_mark">4</span></td>
+    </tr>
+    <tr>
+        <td rowspan="3" valign="middle" class="label">Severity</td>
+        <td class="info">High</td>
+        <td colspan="5" height="30">
+            <table cellpadding="0" cellspacing="0"><tr><td><img class="bar" src="images/bar-high-certain.gif" width="125" height="16"></td><td><img class="bar" src="images/bar-high-firm.gif" width="0" height="16"></td><td><img class="bar" src="images/bar-high-tentative.gif" width="0" height="16"></td></tr></table>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="info">Medium</td>
+        <td colspan="5" height="30">
+            <table cellpadding="0" cellspacing="0"><tr><td><img class="bar" src="images/bar-medium-certain.gif" width="0" height="16"></td><td><img class="bar" src="images/bar-medium-firm.gif" width="0" height="16"></td><td><img class="bar" src="images/bar-medium-tentative.gif" width="0" height="16"></td></tr></table>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="info">Low</td>
+        <td colspan="5" height="30">
+            <table cellpadding="0" cellspacing="0"><tr><td><img class="bar" src="images/bar-low-certain.gif" width="250" height="16"></td><td><img class="bar" src="images/bar-low-firm.gif" width="0" height="16"></td><td><img class="bar" src="images/bar-low-tentative.gif" width="0" height="16"></td></tr></table>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+<div class="rule"></div>
+<h1>Contents</h1>
+<p class="TOCH0"><a href="#1">1.&nbsp;Cleartext submission of password</a></p>
+<p class="TOCH0"><a href="#2">2.&nbsp;Password field submitted using GET method</a></p>
+<p class="TOCH0"><a href="#3">3.&nbsp;Password field with autocomplete enabled</a></p>
+<p class="TOCH0"><a href="#4">4.&nbsp;Frameable response (potential Clickjacking)</a></p>
+<p class="TOCH1"><a href="#4.1">4.1.&nbsp;http://www.haokeduo.com/</a></p>
+<p class="TOCH1"><a href="#4.2">4.2.&nbsp;http://www.haokeduo.com/about</a></p>
+<p class="TOCH1"><a href="#4.3">4.3.&nbsp;http://www.haokeduo.com/cooperation</a></p>
+<p class="TOCH1"><a href="#4.4">4.4.&nbsp;http://www.haokeduo.com/courselist</a></p>
+<p class="TOCH1"><a href="#4.5">4.5.&nbsp;http://www.haokeduo.com/hkdapp</a></p>
+<p class="TOCH1"><a href="#4.6">4.6.&nbsp;http://www.haokeduo.com/index/</a></p>
+<p class="TOCH1"><a href="#4.7">4.7.&nbsp;http://www.haokeduo.com/index/activetion</a></p>
+<p class="TOCH1"><a href="#4.8">4.8.&nbsp;http://www.haokeduo.com/index/register</a></p>
+<p class="TOCH1"><a href="#4.9">4.9.&nbsp;http://www.haokeduo.com/service</a></p>
+<p class="TOCH0"><a href="#5">5.&nbsp;Email addresses disclosed</a></p>
+<p class="TOCH1"><a href="#5.1">5.1.&nbsp;http://www.haokeduo.com/</a></p>
+<p class="TOCH1"><a href="#5.2">5.2.&nbsp;http://www.haokeduo.com/about</a></p>
+<p class="TOCH1"><a href="#5.3">5.3.&nbsp;http://www.haokeduo.com/cooperation</a></p>
+<p class="TOCH1"><a href="#5.4">5.4.&nbsp;http://www.haokeduo.com/courselist</a></p>
+<p class="TOCH1"><a href="#5.5">5.5.&nbsp;http://www.haokeduo.com/hkdapp</a></p>
+<p class="TOCH1"><a href="#5.6">5.6.&nbsp;http://www.haokeduo.com/service</a></p>
+<p class="TOCH0"><a href="#6">6.&nbsp;Robots.txt file</a></p>
+<br><div class="rule"></div>
+<span class="BODH0" id="1">1.&nbsp;Cleartext submission of password</span>
+<br><a class="PREVNEXT" href="#2">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_high_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>High</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/index/</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The page contains a form with the following action URL, which is submitted over clear-text HTTP:<ul><li>http://www.haokeduo.com/index/</li></ul>The form contains the following password field:<ul><li>pw</li></ul></span>
+<h2>Issue background</h2>
+<span class="TEXT">Passwords submitted over an unencrypted connection are vulnerable to capture by an attacker who is suitably positioned on the network. This includes any malicious party located on the user's own network, within their ISP, within the ISP used by the application, and within the application's hosting infrastructure. Even if switched networks are employed at some of these locations, techniques exist to circumvent this defense and monitor the traffic passing through switches. </span>
+<h2>Issue remediation</h2>
+<span class="TEXT">The application should use transport-level encryption (SSL or TLS) to protect all sensitive communications passing between the client and the server. Communications that should be protected include the login mechanism and related functionality, and any functions where sensitive data can be accessed or privileged actions can be performed. These areas of the application should employ their own session handling mechanism, and the session tokens used should never be transmitted over unencrypted communications. If HTTP cookies are used for transmitting session tokens, then the secure flag should be set to prevent transmission over clear-text HTTP.</span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /index/ HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Cache-Control: max-age=0, no-cache, no-store, must-revalidate<br>Content-Length: 23741<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.............<br><b>...[SNIP]...</b><br>&lt;/h1&gt;<br>                <span class="HIGHLIGHT">&lt;form&gt;</span><br>                    &lt;div class="erro_box"&gt;<br><b>...[SNIP]...</b><br>&lt;div class="input_wrapper"&gt;<br>                                <span class="HIGHLIGHT">&lt;input type="password" class="e_clr_input" name="pw" placeholder="..............." type="text"&gt;</span><br>                                &lt;div class="border"&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH0" id="2">2.&nbsp;Password field submitted using GET method</span>
+<br><a class="PREVNEXT" href="#1">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#3">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_low_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Low</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/index/</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The page contains a form with the following action URL, which is submitted using the GET method:<ul><li>http://www.haokeduo.com/index/</li></ul>The form contains the following password field:<ul><li>pw</li></ul></span>
+<h2>Issue background</h2>
+<span class="TEXT">The application uses the GET method to submit passwords, which are transmitted within the query string of the requested URL. Sensitive information within URLs may be logged in various locations, including the user's browser, the web server, and any forward or reverse proxy servers between the two endpoints. URLs may also be displayed on-screen, bookmarked or emailed around by users. They may be disclosed to third parties via the Referer header when any off-site links are followed. Placing passwords into the URL increases the risk that they will be captured by an attacker.</span>
+<h2>Issue remediation</h2>
+<span class="TEXT">All forms submitting passwords should use the POST method. To achieve this, you should specify the method attribute of the FORM tag as <b>method="POST"</b>. It may also be necessary to modify the corresponding server-side form handler to ensure that submitted passwords are properly retrieved from the message body, rather than the URL.</span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /index/ HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Cache-Control: max-age=0, no-cache, no-store, must-revalidate<br>Content-Length: 23741<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.............<br><b>...[SNIP]...</b><br>&lt;/h1&gt;<br>                <span class="HIGHLIGHT">&lt;form&gt;</span><br>                    &lt;div class="erro_box"&gt;<br><b>...[SNIP]...</b><br>&lt;div class="input_wrapper"&gt;<br>                                <span class="HIGHLIGHT">&lt;input type="password" class="e_clr_input" name="pw" placeholder="..............." type="text"&gt;</span><br>                                &lt;div class="border"&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH0" id="3">3.&nbsp;Password field with autocomplete enabled</span>
+<br><a class="PREVNEXT" href="#2">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_low_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Low</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/index/</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The page contains a form with the following action URL:<ul><li>http://www.haokeduo.com/index/</li></ul>The form contains the following password field with autocomplete enabled:<ul><li>pw</li></ul></span>
+<h2>Issue background</h2>
+<span class="TEXT">Most browsers have a facility to remember user credentials that are entered into HTML forms. This function can be configured by the user and also by applications which employ user credentials. If the function is enabled, then credentials entered by the user are stored on their local computer and retrieved by the browser on future visits to the same application.<br><br>The stored credentials can be captured by an attacker who gains access to the computer, either locally or through some remote compromise. Further, methods have existed whereby a malicious web site can retrieve the stored credentials for other applications, by exploiting browser vulnerabilities or through application-level cross-domain attacks. </span>
+<h2>Issue remediation</h2>
+<span class="TEXT">To prevent browsers from storing credentials entered into HTML forms, you should include the attribute <b>autocomplete="off"</b> within the FORM tag (to protect all form fields) or within the relevant INPUT tags (to protect specific individual fields).</span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /index/ HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Cache-Control: max-age=0, no-cache, no-store, must-revalidate<br>Content-Length: 23741<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.............<br><b>...[SNIP]...</b><br>&lt;/h1&gt;<br>                <span class="HIGHLIGHT">&lt;form&gt;</span><br>                    &lt;div class="erro_box"&gt;<br><b>...[SNIP]...</b><br>&lt;div class="input_wrapper"&gt;<br>                                <span class="HIGHLIGHT">&lt;input type="password" class="e_clr_input" name="pw" placeholder="..............." type="text"&gt;</span><br>                                &lt;div class="border"&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH0" id="4">4.&nbsp;Frameable response (potential Clickjacking)</span>
+<br><a class="PREVNEXT" href="#3">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5">Next</a>
+<br>
+<br><span class="TEXT">There are 9 instances of this issue:
+<ul>
+<li><a href="#4.1">/</a></li>
+<li><a href="#4.2">/about</a></li>
+<li><a href="#4.3">/cooperation</a></li>
+<li><a href="#4.4">/courselist</a></li>
+<li><a href="#4.5">/hkdapp</a></li>
+<li><a href="#4.6">/index/</a></li>
+<li><a href="#4.7">/index/activetion</a></li>
+<li><a href="#4.8">/index/register</a></li>
+<li><a href="#4.9">/service</a></li>
+</ul></span>
+<h2>Issue description</h2>
+<span class="TEXT">It might be possible for a web page controlled by an attacker to load the content of this response within an iframe on the attacker's page. This may enable a "clickjacking" attack, in which the attacker's page overlays the target application's interface with a different interface provided by the attacker. By inducing victim users to perform actions such as mouse clicks and keystrokes, the attacker can cause them to unwittingly carry out actions within the application that is being targeted. This technique allows the attacker to circumvent defenses against cross-site request forgery, and may result in unauthorized actions.<br><br>Note that this issue is being reported because the application's response does not set a suitable <b>X-Frame-Options</b> header in order to prevent framing attacks. Some applications attempt to prevent these attacks from within the HTML page itself, using "framebusting" code. However, this type of defense is normally ineffective and can usually be circumvented by a skilled attacker.</span>
+<h2>Issue remediation</h2>
+<span class="TEXT">You should review the application functions that are accessible from within the response, and determine whether they can be used by application users to perform any sensitive actions within the application. If so, then a framing attack targeting this response may result in unauthorized actions.<br><br>To effectively prevent framing attacks, the application should return a response header with the name <b>X-Frame-Options</b> and the value <b>DENY</b> to prevent framing altogether, or the value <b>SAMEORIGIN</b> to allow framing only by pages on the same origin as the response itself.</span>
+<br><br><div class="rule"></div>
+<span class="BODH1" id="4.1">4.1.&nbsp;http://www.haokeduo.com/</span>
+<br><a class="PREVNEXT" href="#4.2">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET / HTTP/1.1<br>Host: www.haokeduo.com<br>Proxy-Connection: keep-alive<br>Upgrade-Insecure-Requests: 1<br>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8<br>Accept-Encoding: gzip, deflate<br>Accept-Language: zh-CN,zh;q=0.9<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:29:24 GMT<br>Content-Type: text/html<br>Connection: keep-alive<br>Vary: Accept-Encoding<br>Content-Length: 26148<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.2">4.2.&nbsp;http://www.haokeduo.com/about</span>
+<br><a class="PREVNEXT" href="#4.1">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.3">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/about</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /about HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 26655<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.3">4.3.&nbsp;http://www.haokeduo.com/cooperation</span>
+<br><a class="PREVNEXT" href="#4.2">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.4">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/cooperation</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /cooperation HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 22034<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.4">4.4.&nbsp;http://www.haokeduo.com/courselist</span>
+<br><a class="PREVNEXT" href="#4.3">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.5">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/courselist</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /courselist HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 25219<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.5">4.5.&nbsp;http://www.haokeduo.com/hkdapp</span>
+<br><a class="PREVNEXT" href="#4.4">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.6">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/hkdapp</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /hkdapp HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 22167<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.6">4.6.&nbsp;http://www.haokeduo.com/index/</span>
+<br><a class="PREVNEXT" href="#4.5">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.7">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/index/</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /index/ HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Cache-Control: max-age=0, no-cache, no-store, must-revalidate<br>Content-Length: 23741<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.............<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.7">4.7.&nbsp;http://www.haokeduo.com/index/activetion</span>
+<br><a class="PREVNEXT" href="#4.6">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.8">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/index/activetion</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /index/activetion HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/index/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:36 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Cache-Control: max-age=0, no-cache, no-store, must-revalidate<br>Content-Length: 22413<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.............<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.8">4.8.&nbsp;http://www.haokeduo.com/index/register</span>
+<br><a class="PREVNEXT" href="#4.7">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#4.9">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/index/register</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /index/register?from=top HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/index/help<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Cache-Control: max-age=0, no-cache, no-store, must-revalidate<br>Content-Length: 23952<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.............<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="4.9">4.9.&nbsp;http://www.haokeduo.com/service</span>
+<br><a class="PREVNEXT" href="#4.8">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5.1">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_firm_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Firm</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/service</b></td>
+</tr>
+</table>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /service HTTP/1.1<br>Host: www.haokeduo.com<br>Proxy-Connection: keep-alive<br>Upgrade-Insecure-Requests: 1<br>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8<br>Referer: http://www.haokeduo.com/<br>Accept-Encoding: gzip, deflate<br>Accept-Language: zh-CN,zh;q=0.9<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:30:15 GMT<br>Content-Type: text/html<br>Connection: keep-alive<br>Vary: Accept-Encoding<br>Content-Length: 24610<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH0" id="5">5.&nbsp;Email addresses disclosed</span>
+<br><a class="PREVNEXT" href="#4">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#6">Next</a>
+<br>
+<br><span class="TEXT">There are 6 instances of this issue:
+<ul>
+<li><a href="#5.1">/</a></li>
+<li><a href="#5.2">/about</a></li>
+<li><a href="#5.3">/cooperation</a></li>
+<li><a href="#5.4">/courselist</a></li>
+<li><a href="#5.5">/hkdapp</a></li>
+<li><a href="#5.6">/service</a></li>
+</ul></span>
+<h2>Issue background</h2>
+<span class="TEXT">The presence of email addresses within application responses does not necessarily constitute a security vulnerability. Email addresses may appear intentionally within contact information, and many applications (such as web mail) include arbitrary third-party email addresses within their core content.<br><br>However, email addresses of developers and other individuals (whether appearing on-screen or hidden within page source) may disclose information that is useful to an attacker; for example, they may represent usernames that can be used at the application's login, and they may be used in social engineering attacks against the organization's personnel. Unnecessary or excessive disclosure of email addresses may also lead to an increase in the volume of spam email received.</span>
+<h2>Issue remediation</h2>
+<span class="TEXT">You should review the email addresses being disclosed by the application, and consider removing any that are unnecessary, or replacing personal addresses with anonymous mailbox addresses (such as helpdesk@example.com).</span>
+<br><br><div class="rule"></div>
+<span class="BODH1" id="5.1">5.1.&nbsp;http://www.haokeduo.com/</span>
+<br><a class="PREVNEXT" href="#4.9">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5.2">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The following email address was disclosed in the response:<ul><li>service@haokeduo.com</li></ul></span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET / HTTP/1.1<br>Host: www.haokeduo.com<br>Proxy-Connection: keep-alive<br>Upgrade-Insecure-Requests: 1<br>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8<br>Accept-Encoding: gzip, deflate<br>Accept-Language: zh-CN,zh;q=0.9<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:29:24 GMT<br>Content-Type: text/html<br>Connection: keep-alive<br>Vary: Accept-Encoding<br>Content-Length: 26148<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br>&lt;/b&gt;<span class="HIGHLIGHT">service@haokeduo.com</span>&lt;/li&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="5.2">5.2.&nbsp;http://www.haokeduo.com/about</span>
+<br><a class="PREVNEXT" href="#5.1">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5.3">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/about</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The following email address was disclosed in the response:<ul><li>service@haokeduo.com</li></ul></span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /about HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 26655<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br>&lt;/b&gt;<span class="HIGHLIGHT">service@haokeduo.com</span>&lt;/li&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="5.3">5.3.&nbsp;http://www.haokeduo.com/cooperation</span>
+<br><a class="PREVNEXT" href="#5.2">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5.4">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/cooperation</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The following email address was disclosed in the response:<ul><li>service@haokeduo.com</li></ul></span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /cooperation HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 22034<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br>&lt;/b&gt;<span class="HIGHLIGHT">service@haokeduo.com</span>&lt;/li&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="5.4">5.4.&nbsp;http://www.haokeduo.com/courselist</span>
+<br><a class="PREVNEXT" href="#5.3">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5.5">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/courselist</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The following email address was disclosed in the response:<ul><li>service@haokeduo.com</li></ul></span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /courselist HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 25219<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br>&lt;/b&gt;<span class="HIGHLIGHT">service@haokeduo.com</span>&lt;/li&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="5.5">5.5.&nbsp;http://www.haokeduo.com/hkdapp</span>
+<br><a class="PREVNEXT" href="#5.4">Previous</a>
+&nbsp;<a class="PREVNEXT" href="#5.6">Next</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/hkdapp</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The following email address was disclosed in the response:<ul><li>service@haokeduo.com</li></ul></span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /hkdapp HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br>Referer: http://www.haokeduo.com/<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:33 GMT<br>Content-Type: text/html<br>Connection: close<br>Vary: Accept-Encoding<br>Content-Length: 22167<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br>&lt;/b&gt;<span class="HIGHLIGHT">service@haokeduo.com</span>&lt;/li&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH1" id="5.6">5.6.&nbsp;http://www.haokeduo.com/service</span>
+<br><a class="PREVNEXT" href="#5.5">Previous</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/service</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The following email address was disclosed in the response:<ul><li>service@haokeduo.com</li></ul></span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET /service HTTP/1.1<br>Host: www.haokeduo.com<br>Proxy-Connection: keep-alive<br>Upgrade-Insecure-Requests: 1<br>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36<br>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8<br>Referer: http://www.haokeduo.com/<br>Accept-Encoding: gzip, deflate<br>Accept-Language: zh-CN,zh;q=0.9<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:30:15 GMT<br>Content-Type: text/html<br>Connection: keep-alive<br>Vary: Accept-Encoding<br>Content-Length: 24610<br><br>&lt;!doctype html&gt;<br>&lt;html&gt;<br>    &lt;head&gt;<br>        &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type"&gt;<br>        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>        &lt;title&gt;.........-...<br><b>...[SNIP]...</b><br>&lt;/b&gt;<span class="HIGHLIGHT">service@haokeduo.com</span>&lt;/li&gt;<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="BODH0" id="6">6.&nbsp;Robots.txt file</span>
+<br><a class="PREVNEXT" href="#5">Previous</a>
+<br>
+<h2>Summary</h2>
+<table cellpadding="0" cellspacing="0" class="summary_table">
+<tr>
+<td rowspan="4" class="icon" valign="top" align="center"><img width="32" height="32" src="images/scan_issue_info_certain_rpt.png"></td>
+<td>Severity:&nbsp;&nbsp;</td>
+<td><b>Information</b></td>
+</tr>
+<tr>
+<td>Confidence:&nbsp;&nbsp;</td>
+<td><b>Certain</b></td>
+</tr>
+<tr>
+<td>Host:&nbsp;&nbsp;</td>
+<td><b>http://www.haokeduo.com</b></td>
+</tr>
+<tr>
+<td>Path:&nbsp;&nbsp;</td>
+<td><b>/robots.txt</b></td>
+</tr>
+</table>
+<h2>Issue detail</h2>
+<span class="TEXT">The web server contains a robots.txt file.</span>
+<h2>Issue background</h2>
+<span class="TEXT">The file robots.txt is used to give instructions to web robots, such as search engine crawlers, about locations within the web site which robots are allowed, or not allowed, to crawl and index.<br><br>The presence of the robots.txt does not in itself present any kind of security vulnerability. However, it is often used to identify restricted or private areas of a site's contents. The information in the file may therefore help an attacker to map out the site's contents, especially if some of the locations identified are not linked from elsewhere in the site. If the application relies on robots.txt to protect access to these areas, and does not enforce proper access control over them, then this presents a serious vulnerability.</span>
+<h2>Issue remediation</h2>
+<span class="TEXT">The robots.txt file is not itself a security threat, and its correct use can represent good practice for non-security reasons. You should not assume that all web robots will honor the file's instructions. Rather, assume that attackers will pay close attention to any locations identified in the file. Do not rely on robots.txt to provide any kind of protection over unauthorized access.</span>
+<h2>Request</h2>
+<div class="rr_div"><span>GET <span class="HIGHLIGHT">/robots.txt</span> HTTP/1.1<br>Host: www.haokeduo.com<br>Accept: */*<br>Accept-Language: en<br>User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)<br>Connection: close<br><br></span></div>
+<h2>Response</h2>
+<div class="rr_div"><span>HTTP/1.1 200 OK<br>Server: Tengine<br>Date: Sat, 14 Jul 2018 07:31:32 GMT<br>Content-Type: text/plain<br>Content-Length: 593<br>Last-Modified: Thu, 28 Jun 2018 02:55:16 GMT<br>Connection: close<br>ETag: "5b344e14-251"<br>Accept-Ranges: bytes<br><br>User-agent: * <br>Disallow: /index/vcode*<br>Disallow: /index/join*<br>Disallow: /index/signqrcode*<br>Disallow: /index/invitefor*<br>Disallow: /index/dashboard*<br>Disallow: /index/forget*<br>Disallow: /index/card<br><b>...[SNIP]...</b><br></span></div>
+<div class="rule"></div>
+<span class="TEXT"><br>Report generated by <a href="http://portswigger.net/burp">Burp Scanner</a> at Sat Jul 14 15:39:37 CST 2018.<br><br></span>
+</div>
+</body>
+</html>

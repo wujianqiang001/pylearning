@@ -1,0 +1,5 @@
+lemo|3.6
+rice|3.9
+pear|2.45
+apple|3.50
+banana|3.56

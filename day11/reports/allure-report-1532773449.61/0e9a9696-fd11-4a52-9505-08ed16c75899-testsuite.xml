@@ -1,0 +1,38 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1532773450766" stop="1532773450766">
+  <description>This is the tests collection phase. Failures are modules that failed to collect.</description>
+  <name>test_collection_phase</name>
+  <title>Collection phase</title>
+  <labels/>
+  <test-cases>
+    <test-case start="1532773450766" status="broken" stop="1532773450766">
+      <name>test_menu</name>
+      <failure>
+        <message>failed</message>
+        <stack-trace>ImportError while importing test module 'F:\PyRD\PR1\day11\testsuits\test_menu.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+testsuits\test_menu.py:3: in &lt;module&gt;
+    from PR1.day11.com.getdata import *
+E   ModuleNotFoundError: No module named 'PR1'</stack-trace>
+      </failure>
+      <attachments/>
+      <labels/>
+      <steps/>
+    </test-case>
+    <test-case start="1532773450766" status="broken" stop="1532773450766">
+      <name>test_order</name>
+      <failure>
+        <message>failed</message>
+        <stack-trace>ImportError while importing test module 'F:\PyRD\PR1\day11\testsuits\test_order.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+testsuits\test_order.py:3: in &lt;module&gt;
+    from PR1.day11.com.getdata import *
+E   ModuleNotFoundError: No module named 'PR1'</stack-trace>
+      </failure>
+      <attachments/>
+      <labels/>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

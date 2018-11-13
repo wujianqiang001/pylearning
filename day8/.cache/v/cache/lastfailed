@@ -1,0 +1,4 @@
+{
+  "apiTest/autotest.py": true, 
+  "pyTest/test_b.py::test_b": true
+}

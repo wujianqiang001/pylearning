@@ -1,0 +1,5 @@
+{
+  "pytest.py::TestClass::()::test_two": true,
+  "pytest.py::test_answer": true,
+  "pytest.py::test_wcf": true
+}
