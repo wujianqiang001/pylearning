@@ -1,0 +1,5 @@
+this ip: 127.0.0.1 is a lagel!
+this ip: 127.0.1 is an illagel!
+this ip: 127.267.2.1 is an illagel!
+this ip: 1.@.3.4 is an illagel!
+this ip: 10.11.12.23 is a lagel!
