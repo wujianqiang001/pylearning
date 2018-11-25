@@ -1,0 +1,16 @@
+[Wed, 21 Nov 2018 22:26:04][class1.py][line:7][INFO] test-----c
+[Wed, 21 Nov 2018 22:26:04][class2.py][line:4][INFO] test-----b
+[Wed, 21 Nov 2018 22:27:55][class1.py][line:5][INFO] 
+a = A
+b = B
+c = C
+
+[Wed, 21 Nov 2018 22:28:05][class1.py][line:7][INFO] test-----c
+[Wed, 21 Nov 2018 22:28:05][class2.py][line:4][INFO] test-----b
+[Wed, 21 Nov 2018 22:31:18][class1.py][line:7][INFO] 
+a = A
+b = B
+c = C
+
+[Wed, 21 Nov 2018 22:31:28][class1.py][line:12][INFO] test-----c
+[Wed, 21 Nov 2018 22:31:28][class2.py][line:4][INFO] test-----b
