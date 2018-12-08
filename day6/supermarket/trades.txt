@@ -1,0 +1,17 @@
+apple|8.15
+lemo|7.38
+pear|3.5
+banana|6.20
+juice|3.45
+pear|3.5
+apple|5.55
+apple|5.55
+apple|5.55
+apple|5.55
+apple|5.55
+apple|5.55
+apple|5.55
+pear|3.5
+apple|5.55
+apple|5.55
+apples|5.55
