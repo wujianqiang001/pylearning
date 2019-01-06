@@ -1,0 +1,71 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1546768220979" stop="1546768221387">
+  <name>testsuite.test_getprices</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1546768220979" status="passed" stop="1546768221141">
+      <name>test_getprices[\u5224\u65ad\u4e702\u65a4apple\u7684\u603b\u4ef7\u662f\u5426\u6b63\u786e]</name>
+      <attachments>
+        <attachment source="820c72bf-976c-49a4-8413-2e842d1c4078-attachment.txt" title="price" type="text/plain"/>
+        <attachment source="4bc9f492-4f13-4088-9fdd-4cd9d92687b0-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="story" value="功能1"/>
+        <label name="feature" value="模块1"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="89632-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1546768221153" status="failed" stop="1546768221387">
+      <name>test_getprices[\u5224\u65ad\u4e703\u65a4pear\u7684\u603b\u4ef7\u662f\u5426\u6b63\u786e]</name>
+      <failure>
+        <message>AssertionError: price: 10.5
+assert '10.5' == '7.1'
+  - 10.5
+  + 7.1</message>
+        <stack-trace>case = '判断买3斤pear的总价是否正确', uri = '/gettprices'
+param = {'price': '3.5', 'trade': 'pear', 'unit': '3'}, exp = 7.1
+
+    @allure.feature("模块1")
+    @allure.story("功能1")
+    @pytest.mark.parametrize("case,uri,param,exp",
+                             datas,
+                             ids=[a[0] for a in datas])
+    def test_getprices(case,uri,param,exp):
+        url = "http://{}:{}{}".format(ip,port,uri)
+        param = json.loads(param)
+        trade = param["trade"]
+        price = getprice(trade)["data"]
+        param["price"] = price
+        allure.attach("price",price)
+        url = url + "?trade={trade}&amp;price={price}&amp;unit={unit}".format(**param)
+        r = requests.get(url=url)
+        assert r.status_code == 200,"status_code: {}".format(r.status_code)
+&gt;       assert r.json()["data"] == str(exp),"price: {}".format(r.json()["data"])
+E       AssertionError: price: 10.5
+E       assert '10.5' == '7.1'
+E         - 10.5
+E         + 7.1
+
+testsuite\test_getprices.py:31: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="4fe4d59b-ca9d-436d-a83a-f14d1fcb8768-attachment.txt" title="price" type="text/plain"/>
+        <attachment source="78868ef6-76b8-44b7-a691-0abb0d0bfb8f-attachment.txt" title="Captured log call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="story" value="功能1"/>
+        <label name="feature" value="模块1"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="89632-MainThread"/>
+        <label name="host" value="wjq"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

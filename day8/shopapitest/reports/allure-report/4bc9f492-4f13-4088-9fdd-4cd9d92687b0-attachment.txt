@@ -1,0 +1,4 @@
+connectionpool.py          207 INFO     Starting new HTTP connection (1): 127.0.0.1
+connectionpool.py          387 DEBUG    "GET /gettprice?trade=apple HTTP/1.1" 200 37
+connectionpool.py          207 INFO     Starting new HTTP connection (1): 127.0.0.1
+connectionpool.py          387 DEBUG    "GET /gettprices?trade=apple&price=5.55&unit=2 HTTP/1.1" 200 37
