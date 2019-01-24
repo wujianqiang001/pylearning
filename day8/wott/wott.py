@@ -13,10 +13,12 @@ def delfile():
 def charts(content,stock,n):
     x = [int(content[i][0].strip()) for i in range(-n,-0)]
     y = [float(content[i][2].strip()) for i in range(-n,-0)]
+    y1 = [float(content[i][3].strip()) for i in range(-n,-0)]
     z = [int(content[i][-1].strip()) for i in range(-n,-0)]
     line = pyecharts.Line(stock)
     line1 = pyecharts.Line(stock)
     line.add("收盘价",x,y,legend_top="50%",legend_pos="80%",mark_line=["min","max"])
+    line.add("最高价",x,y1,legend_top="50%",legend_pos="80%")
     line1.add("成交量",x,z,legend_top="50%",legend_pos="20%")
     grid = pyecharts.Grid(height=720,width=1200)
     grid.add(line,grid_bottom="60%",grid_left="10%")
@@ -34,14 +36,14 @@ def getstock(stock,n):
     content = content.split("\\n\\")
     content = content[2:-1]
     content = [c.split(" ") for c in content]
-    # if float(content[-1][2]) > float(content[-2][2]) > float(content[-3][2]) and int(content[-1][-1]) > int(content[-2][-1]) > int(content[-3][-1]):
+    #if float(content[-1][2]) > float(content[-2][2]) > float(content[-3][2]) and int(content[-1][-1]) > int(content[-2][-1]) > int(content[-3][-1]):
     if float(content[-1][2]) > float(content[-2][2]) > float(content[-3][2]):
         charts(content,stock,n)
         # sys.exit()
 if __name__ == "__main__":
     stocks = []
     delfile()
-    with open("zz1000.txt") as f:
+    with open("zz800.txt") as f:
         for line in f:
             if line.startswith("6"):
                 line = "sh"+line
